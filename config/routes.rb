@@ -1,8 +1,19 @@
 Rails.application.routes.draw do
+  get 'applications/index'
+  get 'applications/show'
+  get 'applications/new'
+  get 'applications/create'
+  get 'jobs/index'
+  get 'jobs/show'
+  get 'jobs/new'
+  get 'jobs/create'
+  get 'jobs/edit'
+  get 'jobs/destroy'
   devise_for :users
   root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :jobs do
+    resources :applications
+  end
+
 end
