@@ -1,5 +1,5 @@
 class Employer < ApplicationRecord
-  belongs_to :job, through: :users
+  has_many :job
   has_many :applications
 
   validates :companyName, presence: true
