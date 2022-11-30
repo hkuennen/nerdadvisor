@@ -2,7 +2,6 @@ class CreateEmployers < ActiveRecord::Migration[7.0]
   def change
     create_table :employers do |t|
       t.string :companyName
-      t.string :image
       t.string :location
       t.string :city
       t.string :street
