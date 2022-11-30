@@ -1,191 +1,98 @@
-.search-form-control {
+
+.search {
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 5px
+}
+
+.search-1 {
   position: relative;
+  width: 100%
 }
 
-.search-form-control .btn {
+.search-1 input {
+  height: 45px;
+  border: none;
+  width: 100%;
+  padding-left: 34px;
+  padding-right: 10px;
+  border-right: 2px solid #eee
+}
+
+.search-1 input:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: none
+}
+
+.search-1 i {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
+  top: 12px;
+  left: 5px;
+  font-size: 24px;
+  color: #eee
 }
 
-.search-form-control .form-control {
-  height: 3.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
+::placeholder {
+  color: $pink;
+  opacity: 1
 }
 
-.search-form-control .form-control:focus {
-  border: 1px solid #1EDD88;
-  outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+.search-2 {
+  position: relative;
+  width: 100%
 }
 
+.search-2 input {
+  height: 45px;
+  border: none;
+  width: 100%;
+  padding-left: 18px;
+  padding-right: 100px
+}
 
+.search-2 input:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: none
+}
 
-.selected {
-  background: coral;
-  border:1px solid salmon;
+.search-2 i {
+  position: absolute;
+  top: 12px;
+  left: -10px;
+  font-size: 24px;
+  color: #eee
 }
-#new-list {
-  display: block;
-  visibility: visible;
-  opacity: 1;
-  font-family: Helvetica, sans-serif;
-  color: #2c2e2f;
-  font-size: 16px;
+
+.search-2 button {
+  position: absolute;
+  right: 1px;
+  top: 0px;
+  border: none;
+  height: 45px;
+  background-color: $green;
+  color: $pink;
+  width: 90px;
+  border-radius: 4px
 }
-#new-list ul,
-#new-list li,
-#new-list h1,
-#new-list h2,
-#new-list h3,
-#new-list h4,
-#new-list h5,
-#new-list h6,
-#new-list p,
-#new-list span {
-  margin: 0;
-  padding: 0;
-}
-#new-list * {
-  box-sizing: border-box;
-}
-#new-list ul {
-  list-style-type: none;
-}
-#new-list li.lever-job {
-  text-align: left;
-  display: flex;
-  text-decoration: none;
-  padding: 0.2em 0;
-  background: none;
-}
-#new-list .lever-team {
-  margin-bottom: 1.5em;
-}
-#new-list .lever-department {
-  margin-bottom: 3em;
-}
-#new-list .lever-team-title {
-  font-size: 1.25em;
-  margin-bottom: 0.5em;
-}
-#new-list .lever-job-title {
-  display: inline-block;
-  flex: 0 0 65%;
-  color: #0c92f3;
-  text-decoration: underline;
-  margin-bottom: 0.2em;
-}
-#new-list .lever-job-title:hover {
-  color: #0068b3;
-}
-#new-list .lever-job-title:active {
-  color: #003459;
-}
-#new-list .lever-job-tag {
-  display: inline-block;
-  color: rgba(44,46,47,0.5);
-  flex: 0 0 35%;
-}
-#new-list select {
-  margin-bottom: 2em;
-}
-@media (max-width: 767px) {
-  #new-list .lever-job-tag,
-  #new-list .lever-job-title {
-    flex: 0 0 100%;
+
+@media (max-width:800px) {
+  .search-1 input {
+      border-right: none;
+      border-bottom: 1px solid #eee
   }
-  #new-list .lever-job {
-    flex-wrap: wrap;
-  }
-}
-#lever-jobs-search {
-  font-size: 1em;
-  padding: 0.5em;
-  border-radius: 3px;
-  border: 1px solid #E3E4E6;
-  margin-bottom: 1em;
-}
-#lever-clear-filters {
-  cursor: pointer;
-  text-decoration: underline;
-  font-size: 0.75em;
-}
 
-#lever-jobs-container {
-  display: block;
-  visibility: visible;
-  opacity: 1;
-  font-family: Helvetica, sans-serif;
-  color: #2c2e2f;
-  font-size: 16px;
-}
-#lever-jobs-container ul,
-#lever-jobs-container li,
-#lever-jobs-container h1,
-#lever-jobs-container h2,
-#lever-jobs-container h3,
-#lever-jobs-container h4,
-#lever-jobs-container h5,
-#lever-jobs-container h6,
-#lever-jobs-container p,
-#lever-jobs-container span {
-  margin: 0;
-  padding: 0;
-}
-#lever-jobs-container * {
-  box-sizing: border-box;
-}
-#lever-jobs-container ul {
-  list-style-type: none;
-}
-#lever-jobs-container li.lever-job {
-  text-align: left;
-  display: flex;
-  text-decoration: none;
-  padding: 0.2em 0;
-  background: none;
-}
-#lever-jobs-container .lever-team {
-  margin-bottom: 1.5em;
-}
-#lever-jobs-container .lever-department {
-  margin-bottom: 3em;
-}
-#lever-jobs-container .lever-team-title {
-  font-size: 1.25em;
-  margin-bottom: 0.5em;
-}
-#lever-jobs-container .lever-department-title {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-#lever-jobs-container .lever-job-title {
-  display: inline-block;
-  flex: 0 0 65%;
-  color: #0c92f3;
-  text-decoration: underline;
-  margin-bottom: 0.2em;
-}
-#lever-jobs-container .lever-job-title:hover {
-  color: #0068b3;
-}
-#lever-jobs-container .lever-job-title:active {
-  color: #003459;
-}
-#lever-jobs-container .lever-job-tag {
-  display: inline-block;
-  color: rgba(44,46,47,0.5);
-  flex: 0 0 35%;
-}
-@media (max-width: 767px) {
-  #lever-jobs-container .lever-job-tag,
-  #lever-jobs-container .lever-job-title {
-    flex: 0 0 100%;
+  .search-2 i {
+      left: 4px
   }
-  #lever-jobs-container .lever-job {
-    flex-wrap: wrap;
+
+  .search-2 input {
+      padding-left: 34px
+  }
+
+  .search-2 button {
+      height: 37px;
+      top: 5px
   }
 }
