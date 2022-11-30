@@ -1,6 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
 import Typed from "typed.js"
 
+// This is animated scroll
+AOS.init({
+  duration: 1200,
+})
+
+// This is typed text
 export default class extends Controller {
   connect() {
     new Typed(this.element, {
