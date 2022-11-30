@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
+  position: absolute;
+  width: 100vw;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +10,33 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+#nav-homepage {
+  margin: 30px 60px;
+}
+
+a.nav-link {
+  color: $green;
+}
+
+.navbar-dark {
+  border: 1px solid f9fafc;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+#login a {
+  text-decoration: none;
+  color: $green;
+}
+
+#login a:hover {
+  color: #f9fafc;
+}
+
+.nav-margin {
+  margin-top: 20vh;
 }
