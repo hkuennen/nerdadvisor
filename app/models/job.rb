@@ -5,5 +5,4 @@ class Job < ApplicationRecord
 
   validates :title, presence: true
   validates :_type, presence: true
-  validates :cv, presence: true
 end
