@@ -69,6 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_115353) do
 
   create_table "jobs", force: :cascade do |t|
     t.string "title"
+    t.text "desc"
     t.string "_type"
     t.date "startDate"
     t.integer "salary"
