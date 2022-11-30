@@ -6,8 +6,6 @@ class CreateJobs < ActiveRecord::Migration[7.0]
       t.date :startDate
       t.integer :salary
       t.string :city
-      t.string :cv
-      t.string :coverLetter
       t.references :user, null: false, foreign_key: true
       t.references :employer, null: false, foreign_key: true
 
