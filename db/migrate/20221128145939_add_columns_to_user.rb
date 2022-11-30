@@ -6,6 +6,6 @@ class AddColumnsToUser < ActiveRecord::Migration[7.0]
     add_column :users, :category, :string
     add_column :users, :skills, :text, array: true, default: []
     add_column :users, :image, :string
-    add_column :users, :role, :text, array: true, default: []
+    add_column :users, :role, :string
   end
 end
