@@ -1,19 +1,31 @@
 <%= render "shared/navbar" %>
 
-<div class="banner-home" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg);">
-  <div class="container-card">
-    <% @jobs.each do |job| %>
-    <div class="box">
-      <span></span>
-      <div class="content">
-        <h2> <%= link_to job.title, job_path(job) %></h2>
-        <p>
-          As Sound Designer at Ubisoft, you will be working together with the team at Massive Entertainment
-          to create a new story-driven open-world video game set in the Star Wars galaxy.
-        </p>
-        <a href="#">Apply Now!</a>
+<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="card-product col-4">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2>Product name</h2>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+      </div>
+
+      <div class="col-8">
+      <% @jobs.each do |job| %>
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2> <%= link_to job.title, job_path(job) %></h2>
+            <p>
+              As Sound Designer at Ubisoft, you will be working together with the team at Massive Entertainment
+              to create a new story-driven open-world video game set in the Star Wars galaxy.
+            </p>
+            <a href="#">Apply Now!</a>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
-    <% end %>
   </div>
 </div>
