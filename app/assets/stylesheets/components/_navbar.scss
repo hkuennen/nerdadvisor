@@ -1,7 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
+  z-index: 10;
   width: 100vw;
+}
+
+.navbar-lewagon-scroll {
+  background-color: #f9fafc;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,7 +18,7 @@
 }
 
 #nav-homepage {
-  margin: 30px 60px;
+  margin: 10px 50px;
 }
 
 a.nav-link {
