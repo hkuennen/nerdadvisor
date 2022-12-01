@@ -1,24 +1,25 @@
 <%= render "shared/navbar" %>
 
 <div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg);">
+<div class="container">
+  <div class="detail-card">
+    <div class="box box-show" id="box-application">
+      <span></span>
+      <div class="box-detail">
+        <div>
+          <h1 class="text-center" style="line-height: 2.5"> <strong> Job Application for <br /></strong> <%= @job.title %></h1>
+            <%= simple_form_for [@job, @application] do |f| %>
+              <%= @job._type  %>
+              <%= f.input :cv %>
+              <%= f.input :coverLetter %>
+              <%= f.submit "Submit", class: "btn btn-success my-4" %>
+            <% end %>
+        </div>
 
-  <div class="container" data-controller="coinSound">
-    <div class="row justify-content-center mt-3 mb-5">
-      <div class="col-12 col-lg-6">
-        <%= link_to "Back to all Jobs", jobs_path, class: "btn btn-primary mb-2" %>
+        <div data-controller="coinSound">
+          <%= link_to "Back to all Jobs", jobs_path, class: "btn btn-primary my-4" %>
+        </div>
       </div>
-    </div>
-
-
-
-    <div class="container">
-      <h1> <strong> Job Application for </strong> <%= @job.title %></h1>
-        <%= simple_form_for [@job, @application] do |f| %>
-          <%= @job._type  %>
-          <%= f.input :cv %>
-          <%= f.input :coverLetter %>
-          <%= f.submit "Submit", class: "btn btn-success" %>
-        <% end %>
     </div>
   </div>
 </div>

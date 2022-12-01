@@ -7,6 +7,11 @@
 
 .navbar-lewagon-scroll {
   background-color: #f9fafc;
+  opacity: 0.9;
+
+  a.nav-link {
+    color: $pink;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -23,6 +28,10 @@
 
 a.nav-link {
   color: $green;
+}
+
+a.nav-link:hover {
+  color: #f9fafc;
 }
 
 .navbar-dark {
