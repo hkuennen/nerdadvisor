@@ -15,9 +15,9 @@
 
 .banner h1 {
   margin: 0;
-  color: #f9fafc;
+  color: $green;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -35,14 +35,14 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
-  }
+}
 
-  .paral1 {
-    min-height: 200vh;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 50% 50%;
-    }
+.paral1 {
+  min-height: 200vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
 
 .paralsec {
   background-image: url("https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg");}
