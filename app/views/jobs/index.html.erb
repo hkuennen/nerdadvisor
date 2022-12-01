@@ -17,16 +17,22 @@
         <div class="box">
           <span></span>
           <div class="content">
-            <h2> <%= job.employer.companyName  %>: <%= link_to job.title, job_path(job) %></h2>
+            <h4> <%= job.employer.companyName  %>: <%= job.title %></h4>
             <p>
             <%= job.desc  %>
             <br>
-            <%= job._type  %>: €<%=job.salary%>/year
-            <img src="https://mario.wiki.gallery/images/9/91/PN_Spinning_Coin.gif" width="20px" />
-            <br>
-            <%= job.city  %> - <%=job.startDate.strftime("%m/%Y")%>
-            </p>
-            <a href="#">Apply Now!</a>
+            <div class="d-flex justify-content-between">
+              <div>
+                <%= job._type  %>: €<%=job.salary%>/year
+                <img src="https://mario.wiki.gallery/images/9/91/PN_Spinning_Coin.gif" width="20px" />
+                <br>
+                <%= job.city  %> - <%=job.startDate.strftime("%m/%Y")%>
+              </div>
+              </p>
+              <div class="col-3 btn btn-dark">
+                <%= link_to "I'm interested", job_path(job) %>
+              </div>
+            </div>
           </div>
         </div>
         <% end %>
