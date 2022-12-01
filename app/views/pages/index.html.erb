@@ -1,0 +1,20 @@
+<%= render "shared/navbar" %>
+
+<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg);">
+
+
+  <div class="col-8">
+    <% @applications.each do |application| %>
+      <div class="box">
+        <span></span>
+        <div class="content">
+          <h2> Application #<%= application.id  %></h2>
+          <h2> <%= application.job.employer.companyName  %></h2>
+          <h2> <%= application.job.title  %></h2>
+          <h2> <%= application.job._type  %>: €<%=application.job.salary%>/year </h2>
+          <h2> You sent application on <%= application.created_at  %></h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
