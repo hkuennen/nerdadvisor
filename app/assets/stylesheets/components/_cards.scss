@@ -37,6 +37,10 @@
   transition: 0.5s;
 }
 
+#box-application {
+  width: 50%;
+}
+
 .box:hover {
   transform: translateY(-20px);
 }
@@ -120,6 +124,10 @@
 //   grid-template-columns: 1fr 1fr;
 //   grid-gap: 20px;
 // }
+
+.card-length {
+  width: 40%;
+}
 
 .card-product {
   overflow: hidden;
