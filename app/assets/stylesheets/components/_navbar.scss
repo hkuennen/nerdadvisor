@@ -30,6 +30,10 @@ a.nav-link {
   color: $green;
 }
 
+a.nav-link:hover {
+  color: #f9fafc;
+}
+
 .navbar-dark {
   border: 1px solid f9fafc;
 }
