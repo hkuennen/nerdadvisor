@@ -2,6 +2,9 @@ const path    = require("path")
 const webpack = require("webpack")
 
 module.exports = {
+  module: {
+    rules: [{ test: /\.mp3$/, loader: "file-loader" }],
+  },
   mode: "production",
   devtool: "source-map",
   entry: {
