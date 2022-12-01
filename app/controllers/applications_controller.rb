@@ -18,8 +18,9 @@ class ApplicationsController < ApplicationController
 
   def create
     @application = Application.new(application_params)
-    @application.user = @user
-    @application.job = @job
+    @application.user_id = @user.id
+    @application.job_id = @job.id
+    @application.employer_id = @job.employer.id
     if @application.save
       redirect_to job_application_path(@application.job_id, @application.id), status: :see_other
     else
@@ -36,7 +37,7 @@ class ApplicationsController < ApplicationController
   private
 
   def application_params
-    params.require(:application).permit(:user_id, :job_id)
+    params.require(:application).permit(:cv, :coverLetter)
   end
 
   def set_user
