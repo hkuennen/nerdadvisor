@@ -4,22 +4,27 @@
   <div class="container">
     <div class="row">
       <div class="card-product col-4">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <img src="https://thumbs.gfycat.com/DopeyLegitimateGaur-max-1mb.gif" />
         <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <h2>Search Results</h2>
+          <p>Found <strong>30 Jobs</strong></p>
         </div>
       </div>
+
 
       <div class="col-8">
       <% @jobs.each do |job| %>
         <div class="box">
           <span></span>
           <div class="content">
-            <h2> <%= link_to job.title, job_path(job) %></h2>
+            <h2> <%= job.employer.companyName  %>: <%= link_to job.title, job_path(job) %></h2>
             <p>
-              As Sound Designer at Ubisoft, you will be working together with the team at Massive Entertainment
-              to create a new story-driven open-world video game set in the Star Wars galaxy.
+            <%= job.desc  %>
+            <br>
+            <%= job._type  %>: €<%=job.salary%>/year
+            <img src="https://mario.wiki.gallery/images/9/91/PN_Spinning_Coin.gif" width="20px" />
+            <br>
+            <%= job.city  %> - <%=job.startDate.strftime("%m/%Y")%>
             </p>
             <a href="#">Apply Now!</a>
           </div>
