@@ -9,19 +9,35 @@
           <form action="#" method="POST">
             <p>Results</p>
             <p>Found <strong><%= pluralize(@jobs.size, "job") %></strong></p>
-            <p><label for="job-type">Job type</label>
-            <select id="job-type" name="job-type">
-              <option>Fulltime</option>
-              <option>Parttime</option>
-              <option>Remote</option>
-              <option>Hybrid</option>
-            </select></p>
-            <p><label for="skills">Job type</label>
+            <p>
+              <input type="checkbox" id="fulltime" name="fulltime" value="Fulltime">
+              <label for="fulltime">Fulltime</label>
+            </p>
+            <p>
+              <input type="checkbox" id="parttime" name="parttime" value="Parttime">
+              <label for="parttime">Parttime</label>
+            </p>
+            <p>
+              <input type="checkbox" id="remote" name="remote" value="Remote">
+              <label for="remote">Remote</label>
+            </p>
+            <p>
+              <input type="checkbox" id="hybrid" name="hybrid" value="Hybrid">
+              <label for="hybrid">Hybrid</label>
+            </p>
+            <p><label for="skills">Job Category</label>
             <select id="skills" name="skills">
-              <option>Ruby</option>
-              <option>Python</option>
-              <option>JavaScript</option>
-              <option>C++</option>
+              <option>Sound</option>
+              <option>Arts</option>
+              <option>Coding</option>
+              <option>Sales</option>
+              <option>Product</option>
+            </select></p>
+            <p><label for="language">Language</label>
+            <select id="language" name="language">
+              <option>English</option>
+              <option>German</option>
+              <option>Spanish</option>
             </select></p>
           </form>
         </div>
