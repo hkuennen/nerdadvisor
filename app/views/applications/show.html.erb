@@ -7,6 +7,13 @@
     <p>Company: <em><%= @application.employer.companyName %></em></p>
     <p>Location: <em><%= @application.job.city %></em></p>
     <p># of applicants: <em><%= Application.where(job_id: @application.job.id).count %></em></p>
-    <%= cl_image_tag @application.cv.key, width: "400px", id: "cv" %>
+    <div class="pt-4 pb-4">
+      <% if @application.cv.attached? %>
+        <p>CV uploaded:</p>
+        <%= cl_image_tag @application.cv.key, width: "400px", id: "cv" %>
+      <% else %>
+        <p><em>[No CV uploaded.]</em></p>
+      <% end %>
+    </div>
   </div>
 </div>

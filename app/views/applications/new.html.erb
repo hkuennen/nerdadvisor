@@ -12,7 +12,7 @@
               <p><strong>Job Type:</strong> <%= @job._type %></p>
               <p><strong>First Name:</strong> <%= @user.firstName %></p>
               <p><strong>Last Name:</strong> <%= @user.lastName %></p>
-              <%= f.input :cv, label: "CV", as: :file %>
+              <%= f.input :cv, label: "CV", as: :file, required: true %>
               <%= f.input :coverLetter, label: "Cover Letter", as: :file %>
               <%= f.submit "Submit", class: "btn btn-success my-4" %>
             <% end %>
