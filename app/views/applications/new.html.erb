@@ -9,9 +9,11 @@
         <div>
           <h1 class="text-center" style="line-height: 2.5"> <strong> Job Application for <br /></strong> <%= @job.title %></h1>
             <%= simple_form_for [@job, @application] do |f| %>
-              <%= @job._type  %>
-              <%= f.input :cv %>
-              <%= f.input :coverLetter %>
+              <p><strong>Job Type:</strong> <%= @job._type %></p>
+              <p><strong>First Name:</strong> <%= @user.firstName %></p>
+              <p><strong>Last Name:</strong> <%= @user.lastName %></p>
+              <%= f.input :cv, label: "CV", as: :file %>
+              <%= f.input :coverLetter, label: "Cover Letter", as: :file %>
               <%= f.submit "Submit", class: "btn btn-success my-4 btn-link", style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
             <% end %>
         </div>
