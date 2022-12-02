@@ -6,6 +6,9 @@
       <div class="box box-show">
       <span></span>
         <div class="box-detail">
+          <div class="pb-4">
+            <%= cl_image_tag @application.employer.image.key, height: "40px" %>
+          </div>
           <h2>Application summary</h2>
           <h4>Name: <em><%= "#{@application.user.firstName} #{@application.user.lastName}" %></em></h4>
           <h4>Job: <em><%= @application.job.title %></em></h4>

@@ -19,6 +19,9 @@ jobs index
         <div class="box">
           <span></span>
           <div class="content">
+            <div class="pb-4">
+              <%= cl_image_tag job.employer.image.key, height: "40px" %>
+            </div>
             <h4> <%= job.title %> at <%= job.employer.companyName  %> </h4>
             <p>
             <%= job.desc  %>
