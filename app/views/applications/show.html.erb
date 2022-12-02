@@ -15,7 +15,7 @@
           <div class="pt-4 pb-4">
             <% if @application.cv.attached? %>
               <h4>CV uploaded:</h4>
-              <%= cl_image_tag @application.cv.key, width: "400px", id: "cv" %>
+              <%= cl_image_tag @application.cv.key, width: "200px", id: "cv" %>
             <% else %>
               <h4><em>[No CV uploaded.]</em></h4>
             <% end %>
