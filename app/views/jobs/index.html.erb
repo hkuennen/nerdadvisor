@@ -1,6 +1,6 @@
 <%= render "shared/navbar" %>
 
-<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg);">
+<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:80px">
   <div class="container">
     <div class="row">
       <div class="card-product col-4 bg-transparent text-light" >
@@ -41,7 +41,7 @@
             <%= job.desc  %>
             <br>
             <div class="d-flex justify-content-between">
-              <div>
+              <div style="font-weight: bold;">
                 <%= job._type  %>: €<%=job.salary%>/year
                 <img src="https://mario.wiki.gallery/images/9/91/PN_Spinning_Coin.gif" width="20px" />
                 <br>
