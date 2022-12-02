@@ -6,27 +6,33 @@
     <div class="box box-show">
       <span></span>
       <div class="box-detail">
-        <h2><%= @job.title %> at <%= @job.employer.companyName  %></h2><br>
-        <p>
-        <h4>COMPANY LOCATION</h4>
-        <i><%= @job.employer.companyName  %>
+        <h3><%= @job.title %> at <%= @job.employer.companyName  %></h3><br>
+
+        <h4>Company Location</h4>
+        <%= @job.employer.companyName %>
         <br>
-        <%= @job.employer.street  %>
+        <%= @job.employer.street %>
         <br>
-        <%= @job.employer.city  %> <%= @job.employer.postcode  %>
+        <%= @job.employer.city %> <%= @job.employer.postcode %>
         <br><br>
         <h4>Start Date: <%= @job.startDate.strftime("%m/%Y")%></h4>
         <br>
-        <h4>JOB DESCRIPTION</h4>
+        <h4>Job Description</h4>
 
         <%= @job.desc  %> <br> <br>
 
-        We thank you for your interest, however, only those candidates selected for an interview will be contacted. <strong>No agencies please.</strong>
+        <p>We thank you for your interest, however, only those candidates selected for an interview will be contacted. <strong>No agencies please.</strong></p>
         <br><br>
-        </p>
-        <%= link_to "Apply", new_job_application_path(params[:id])%>
-        <a href="#">Save</a>
-        <a href="#">Refer a friend</a>
+
+        <button type="button" class="col-3 btn btn-light btn-link">
+          <%= link_to "Apply", new_job_application_path(params[:id]), style:"text-decoration:none; color:#f9fafc; font-weight:bold"%>
+        </button>
+        <button type="button" class="col-3 btn btn-light btn-link">
+          <a style="text-decoration:none; color:#f9fafc; font-weight:bold" href="#">Save</a>
+        </button>
+        <button type="button" class="btn btn-light btn-link">
+          <a style="text-decoration:none; color:#f9fafc; font-weight:bold" href="#">Refer a friend</a>
+        </button>
       </div>
     </div>
   </div>

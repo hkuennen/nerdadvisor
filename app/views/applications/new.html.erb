@@ -12,12 +12,12 @@
               <%= @job._type  %>
               <%= f.input :cv %>
               <%= f.input :coverLetter %>
-              <%= f.submit "Submit", class: "btn btn-success my-4" %>
+              <%= f.submit "Submit", class: "btn btn-success my-4 btn-link", style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
             <% end %>
         </div>
 
         <div>
-          <%= link_to "Back to all Jobs", jobs_path, class: "btn btn-primary my-4" %>
+          <%= link_to "Back to all Jobs", jobs_path, class: "btn btn-primary my-4", style:"text-shadow: 1px 1px #D217D9; text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
         </div>
       </div>
     </div>

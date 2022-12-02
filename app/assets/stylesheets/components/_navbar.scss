@@ -42,9 +42,10 @@ a.nav-link:hover {
   margin-right: 20px;
 }
 
-#login a {
+.btn-link {
   text-decoration: none;
-  color: $green;
+  background-color: $green;
+  text-shadow: 1px 1px #D217D9;
 }
 
 #login a:hover {
