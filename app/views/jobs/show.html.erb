@@ -1,5 +1,3 @@
-jobs show
-
 <%= render "shared/navbar" %>
 
 <div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg);">
@@ -28,16 +26,13 @@ jobs show
 
         <p>We thank you for your interest, however, only those candidates selected for an interview will be contacted. <strong>No agencies please.</strong></p>
         <br><br>
-
-        <button type="button" class="col-3 btn btn-light btn-link">
+        <button type="button" class="btn col-3 btn-secondary1">
           <%= link_to "Apply", new_job_application_path(params[:id]), style:"text-decoration:none; color:#f9fafc; font-weight:bold"%>
         </button>
-        <button type="button" class="col-3 btn btn-light btn-link">
+        <button type="button" class="btn col-3 btn-secondary2">
           <a style="text-decoration:none; color:#f9fafc; font-weight:bold" href="#">Save</a>
         </button>
-        <button type="button" class="btn btn-light btn-link">
-          <a style="text-decoration:none; color:#f9fafc; font-weight:bold" href="#">Refer a friend</a>
-        </button>
+
       </div>
     </div>
   </div>

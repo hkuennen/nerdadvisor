@@ -1,5 +1,3 @@
-jobs index
-
 <%= render "shared/navbar" %>
 
 <div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg);">
@@ -47,10 +45,10 @@ jobs index
                 <%= job._type  %>: €<%=job.salary%>/year
                 <img src="https://mario.wiki.gallery/images/9/91/PN_Spinning_Coin.gif" width="20px" />
                 <br>
-                <%= job.city  %> - <%=job.startDate.strftime("%m/%Y")%>
+                <%= job.city  %> - Start Date: <%=job.startDate.strftime("%m/%Y")%>
               </div>
               </p>
-              <div class="col-3 btn btn-light btn-link">
+              <div class="btn col-3 btn-secondary4">
                 <%= link_to "I'm interested", job_path(job), style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
               </div>
             </div>
