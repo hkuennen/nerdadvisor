@@ -1,5 +1,3 @@
-app new html
-
 <%= render "shared/navbar" %>
 
 <div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg);">
@@ -14,7 +12,7 @@ app new html
               <p><strong>Job Type:</strong> <%= @job._type %></p>
               <p><strong>First Name:</strong> <%= @user.firstName %></p>
               <p><strong>Last Name:</strong> <%= @user.lastName %></p>
-              <%= f.input :cv, label: "CV", as: :file %>
+              <%= f.input :cv, label: "CV", as: :file, required: true %>
               <%= f.input :coverLetter, label: "Cover Letter", as: :file %>
               <%= f.submit "Submit", class: "btn btn-success my-4 btn-link", style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
             <% end %>
