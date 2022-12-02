@@ -154,7 +154,6 @@ cards
 }
 
 .card-product {
-  overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -175,7 +174,7 @@ cards
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -183,5 +182,8 @@ cards
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding-top: 16px;
+  background-color: #3c3b3b;
+  opacity: 1;
+  color: $green;
 }
