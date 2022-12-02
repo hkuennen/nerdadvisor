@@ -3,11 +3,27 @@
 <div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg);">
   <div class="container">
     <div class="row">
-      <div class="card-product col-4">
+      <div class="card-product col-4 bg-transparent text-light" >
         <img src="https://thumbs.gfycat.com/DopeyLegitimateGaur-max-1mb.gif" />
         <div class="card-product-infos">
-          <h2>Search Results</h2>
-          <p>Found <strong>30 Jobs</strong></p>
+          <form action="#" method="POST">
+            <p>Results</p>
+            <p>Found <strong><%= pluralize(@jobs.size, "job") %></strong></p>
+            <p><label for="job-type">Job type</label>
+            <select id="job-type" name="job-type">
+              <option>Fulltime</option>
+              <option>Parttime</option>
+              <option>Remote</option>
+              <option>Hybrid</option>
+            </select></p>
+            <p><label for="skills">Job type</label>
+            <select id="skills" name="skills">
+              <option>Ruby</option>
+              <option>Python</option>
+              <option>JavaScript</option>
+              <option>C++</option>
+            </select></p>
+          </form>
         </div>
       </div>
 
@@ -29,10 +45,10 @@
                 <%= job._type  %>: €<%=job.salary%>/year
                 <img src="https://mario.wiki.gallery/images/9/91/PN_Spinning_Coin.gif" width="20px" />
                 <br>
-                <%= job.city  %> - <%=job.startDate.strftime("%m/%Y")%>
+                <%= job.city  %> - Start Date: <%=job.startDate.strftime("%m/%Y")%>
               </div>
               </p>
-              <div class="col-3 btn btn-light btn-link">
+              <div class="btn col-3 btn-secondary4">
                 <%= link_to "I'm interested", job_path(job), style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
               </div>
             </div>
