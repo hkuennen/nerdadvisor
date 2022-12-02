@@ -1,6 +1,4 @@
-cards
-
-.bg-main {
+cards .bg-main {
   background-size: contain;
   padding: 120px 0 0;
 }
@@ -119,7 +117,7 @@ cards
 
 .content h4 {
   font-size: 1.2em;
-  color: $light-gray;
+  color: $pink;
   margin-bottom: 20px;
 }
 
@@ -157,7 +155,7 @@ cards
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
 }
@@ -177,7 +175,7 @@ cards
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: 0.7;
   margin-bottom: 0;
   margin-top: 8px;
 }
