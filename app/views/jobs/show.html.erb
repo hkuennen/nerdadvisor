@@ -6,6 +6,9 @@
     <div class="box box-show">
       <span></span>
       <div class="box-detail">
+        <div class="pb-4">
+          <%= cl_image_tag @job.employer.image.key, height: "40px" %>
+        </div>
         <h3><%= @job.title %> at <%= @job.employer.companyName  %></h3><br>
 
         <h4>Company Location</h4>

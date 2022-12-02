@@ -9,6 +9,9 @@
       <div class="box" style="width:50%; height:250px">
         <span></span>
         <div class="content">
+          <div class=" pt-4 pb-4">
+            <%= cl_image_tag application.employer.image.key, height: "40px" %>
+          </div>
           <h4> Application #<%= application.id  %></h4>
           <p> <%= application.job.employer.companyName  %></p>
           <p> <%= application.job.title  %></p>
