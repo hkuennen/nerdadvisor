@@ -4,15 +4,21 @@
   <div class="container">
     <div class="detail-card">
       <div class="box box-show">
-        <span></span>
-          <div class="box-detail">
-            <h2>Application summary</h2>
-            <h4><p>Name: <em><%= "#{@application.user.firstName} #{@application.user.lastName}" %></em></p>
-            <p>Job: <em><%= @application.job.title %></em></p>
-            <p>Company: <em><%= @application.employer.companyName %></em></p>
-            <p>Location: <em><%= @application.job.city %></em></p>
-            <p># of applicants: <em><%= Application.where(job_id: @application.job.id).count %></em></p></h4>
-            <%= cl_image_tag @application.cv.key, width: "400px", id: "cv" %>
+      <span></span>
+        <div class="box-detail">
+          <h2>Application summary</h2>
+          <h4>Name: <em><%= "#{@application.user.firstName} #{@application.user.lastName}" %></em></h4>
+          <h4>Job: <em><%= @application.job.title %></em></h4>
+          <h4>Company: <em><%= @application.employer.companyName %></em></h4>
+          <h4>Location: <em><%= @application.job.city %></em></h4>
+          <h4># of applicants: <em><%= Application.where(job_id: @application.job.id).count %></em></h4>
+          <div class="pt-4 pb-4">
+            <% if @application.cv.attached? %>
+              <h4>CV uploaded:</h4>
+              <%= cl_image_tag @application.cv.key, width: "200px", id: "cv" %>
+            <% else %>
+              <h4><em>[No CV uploaded.]</em></h4>
+            <% end %>
           </div>
         </div>
       </div>
