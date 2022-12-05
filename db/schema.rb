@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_30_115353) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_05_115709) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -53,6 +53,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_115353) do
     t.index ["user_id"], name: "index_applications_on_user_id"
   end
 
+  create_table "attendees", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_attendees_on_event_id"
+    t.index ["user_id"], name: "index_attendees_on_user_id"
+  end
+
   create_table "employers", force: :cascade do |t|
     t.string "companyName"
     t.string "location"
@@ -65,6 +74,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_115353) do
     t.string "recruiterEmail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.datetime "date"
+    t.string "desc"
+    t.string "venue"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -105,6 +128,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_115353) do
   add_foreign_key "applications", "employers"
   add_foreign_key "applications", "jobs"
   add_foreign_key "applications", "users"
+  add_foreign_key "attendees", "events"
+  add_foreign_key "attendees", "users"
+  add_foreign_key "events", "users"
   add_foreign_key "jobs", "employers"
   add_foreign_key "jobs", "users"
 end
