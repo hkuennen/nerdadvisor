@@ -1,5 +1,3 @@
-cards
-
 .bg-main {
   background-size: contain;
   padding: 120px 0 0;
@@ -32,14 +30,14 @@ cards
 
 .box {
   position: relative;
-  width: 100%;
-  height: 400px;
+  width: 90%;
+  height: 300px;
   color: white;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 30px;
+  margin: 20px 70px;
   transition: 0.5s;
 }
 
@@ -56,12 +54,17 @@ cards
   transition: 0.5s;
 }
 
+#show-more {
+  max-height: 65px;
+  overflow: auto;
+}
+
 #box-application {
   width: 60%;
 }
 
 .box:hover {
-  transform: translateY(-20px);
+  transform: scale(1.05);
 }
 
 .box:before {

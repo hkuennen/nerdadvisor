@@ -1,7 +1,7 @@
-<%= render "shared/navbar" %>
-
-<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:80px">
+<div class="hero" style="background-image: url(https://images.pexels.com/photos/7776881/pexels-photo-7776881.jpeg)">
+<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:50px">
   <div class="container">
+  <h1 class="text-center mb-4">Available Jobs</h1>
     <div class="row">
       <div class="card-product col-4 text-light d-grid" >
         <div class="col">
@@ -54,9 +54,11 @@
             <div class="pb-4">
               <%= cl_image_tag job.employer.image.key, height: "40px" %>
             </div>
-            <h4> <%= job.title %> at <%= job.employer.companyName  %> </h4>
-            <p>
-            <%= job.desc  %>
+            <h5> <%= job.title %> at <%= job.employer.companyName  %> </h5>
+            <hr>
+            <div id="show-more">
+              <p> <%= job.desc %> </p>
+            </div>
             <br>
             <div class="d-flex justify-content-between">
               <div style="font-weight: bold;">
