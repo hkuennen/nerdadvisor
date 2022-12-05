@@ -20,11 +20,11 @@
               <div class="form-group d-flex">
                 <p>
                   <label for="title" class="form-input-label">Job Title</label>
-                  <input type="text" id="title" name="title" value="<%= params[:title].capitalize %>" placeholder="Search for title..." class="form-input bg-secondary justify-content-end">
+                  <input type="text" id="title" name="title" <%= "value=#{params[:title].capitalize}" if params[:title].present? %> placeholder="Search for title..." class="form-input bg-secondary justify-content-end">
                 </p>
                 <p>
                   <label for="location" class="form-input-label">Location</label>
-                  <input type="text" id="location" name="city" value="<%= params[:city].capitalize %>" placeholder="Search for city..." class="form-input bg-secondary justify-content-end">
+                  <input type="text" id="location" name="city" <%= "value=#{params[:city].capitalize}" if params[:city].present? %> placeholder="Search for city..." class="form-input bg-secondary justify-content-end">
                 </p>
               </div>
             </fieldset>
