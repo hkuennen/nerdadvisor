@@ -1,5 +1,6 @@
-<div class="hero" style="background-image: url(https://images.pexels.com/photos/7776881/pexels-photo-7776881.jpeg)">
-<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:50px">
+<%= render "shared/navbar" %>
+
+<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px">
   <div class="container">
   <h1 class="text-center mb-4">Available Jobs</h1>
     <div class="row">
@@ -68,9 +69,7 @@
                 <%= job.city  %> - Start Date: <%=job.startDate.strftime("%m/%Y")%>
               </div>
               </p>
-              <div class="btn col-3 btn-secondary4">
-                <%= link_to "I'm interested", job_path(job), style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
-              </div>
+              <%= link_to "I'm interested", job_path(job), style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px", class:"btn col-3 btn-secondary4" %>
             </div>
           </div>
         </div>
