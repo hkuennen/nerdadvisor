@@ -28,3 +28,12 @@ h5 {
 #login {
   border: 1px solid #10F6B7;
 }
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}

@@ -4,12 +4,13 @@
 <h1 class="text-center mb-5">Find exciting gaming events near you!</h1>
   <div class="container d-flex">
       <div class="container flex-row">
-              <div class="col-8">
-      <% @events.each do |event| %>
-        <div class="box">
-          <span></span>
+        <div class="col-6">
+          <% @events.each do |event| %>
+            <div class="box" style="width: 150%">
+            <span></span>
           <div class="content">
-            <h5> <%= event.title %> at <%= event.date  %> </h5>
+          <h5><img src="https://acegif.com/wp-content/uploads/2022/fzk5d/76-open-close-mouth.gif" width="20px" />
+            <%= event.title %> </h5>
             <hr>
             <div id="show-more">
               <p> <%= event.desc %> </p>
@@ -17,10 +18,10 @@
             <br>
             <div class="d-flex justify-content-between">
               <div style="font-weight: bold;">
-                <%= event.venue  %>: €<%=event.address%>/year
+                <%= event.venue  %> - <%=event.address%>/year
                 <%# <img src="https://mario.wiki.gallery/images/9/91/PN_Spinning_Coin.gif" width="20px" /> %>
                 <br>
-                <%= event.date  %>
+                <%= event.date.strftime("%A, %d %b %Y at %l:%M %p GMT")  %>
               </div>
               </p>
             </div>
