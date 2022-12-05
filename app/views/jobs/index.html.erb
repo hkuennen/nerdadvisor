@@ -11,12 +11,12 @@
           <form action="#" method="POST">
             <fieldset>
             <legend>Results</legend>
-            <p class="bg-dark">Found <strong><%= pluralize(@jobs.size, "job") %></strong></p>
+            <p class="bg-dark py-2">Found <strong><%= pluralize(@jobs.size, "job") %></strong></p>
             </fieldset>
             <fieldset>
             <hr>
             <legend>Job types</legend>
-              <div class="form-check bg-dark">
+              <div class="form-check bg-dark pt-1 pb-3">
                 <p>
                   <input type="checkbox" id="fulltime" name="fulltime" value="Fulltime" class="form-check-input bg-secondary">
                   <label for="fulltime" class="form-check-label">Fulltime</label>
@@ -63,6 +63,12 @@
                   <option>German</option>
                   <option>Spanish</option>
                 </select></p>
+              </div>
+            </fieldset>
+            <hr>
+            <fieldset>
+              <div class="d-flex justify-content-center">
+                <button type="Submit" class="btn btn-dark px-5">Filter</button>
               </div>
             </fieldset>
           </form>
