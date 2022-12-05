@@ -1,5 +1,18 @@
-show events here
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<%= render "shared/navbar" %>
+
+<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px; min-height: 130vh;">
+<h1 class="text-center mb-5">Find exciting gaming events near you!</h1>
+  <div class="container d-flex">
+      <div class="container flex-row">
+        <h1>Hello</h1>
+      </div>
+      <div class="container flex-row">
+        <div class="rounded" style="width: 100%; height: 650px; border: 2px solid #10F6B7"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
