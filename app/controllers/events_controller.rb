@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_user
+  before_action :set_event, only: [:destroy]
+
 
   def index
     @events = Event.all
@@ -22,9 +24,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(application_params)
+    @event = Event.new(event_params)
     @event.user_id = @user.id
-    if @application.save
+    if @event.save
       redirect_to event_path(@event)
     else
       render :new, status: :unprocessable_entity
@@ -33,7 +35,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    redirect_to pages_path, status: :see_other
+    redirect_to events_path, status: :see_other
   end
 
   private

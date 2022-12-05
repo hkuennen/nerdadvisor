@@ -18,16 +18,19 @@
             <br>
             <div class="d-flex justify-content-between">
               <div style="font-weight: bold;">
-                <%= event.venue  %> - <%=event.address%>/year
-                <%# <img src="https://mario.wiki.gallery/images/9/91/PN_Spinning_Coin.gif" width="20px" /> %>
+                <%= event.venue  %> - <%=event.address%>
                 <br>
                 <%= event.date.strftime("%A, %d %b %Y at %l:%M %p GMT")  %>
               </div>
               </p>
+              <%= link_to raw("<i class=\"fa-solid fa-trash-can\"></i>"), event_path(event), data: { turbo_method: :delete } %>
+
             </div>
           </div>
         </div>
         <% end %>
+
+
       </div>
       </div>
       <div class="container flex-row">
@@ -36,6 +39,8 @@
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
+        <%= link_to "Create New Event", new_event_path, class: "btn col-3 btn-secondary1", style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px"%>
+
       </div>
     </div>
   </div>
