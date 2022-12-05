@@ -14,12 +14,12 @@
               <p><strong>Last Name:</strong> <%= @user.lastName %></p>
               <%= f.input :cv, label: "CV", as: :file, required: true %>
               <%= f.input :coverLetter, label: "Cover Letter", as: :file %>
-              <%= f.submit "Submit", class: "btn btn-success my-4 btn-link", style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
+              <%= f.submit "Submit", class: "btn col-3 btn-secondary1", style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
             <% end %>
         </div>
 
         <div>
-          <%= link_to "Back to all Jobs", jobs_path, class: "btn btn-primary my-4", style:"text-shadow: 1px 1px #D217D9; text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
+          <%= link_to "Back to all Jobs", jobs_path, class: "btn col-3 btn-secondary2", style:"text-shadow: 1px 1px #D217D9; text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
         </div>
       </div>
     </div>

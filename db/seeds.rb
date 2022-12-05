@@ -24,8 +24,15 @@ companies = [
             { name: "Electronic Arts", city: "Berlin", street: "Berliner Straße 116", postcode: 10713, domain: "ea.com" },
             { name: "Nintendo", city: "Frankfurt am Main", street: "Goldsteinstraße 235", postcode: 60528, domain: "nintendo.de" },
             { name: "Activision Blizzard", city: "Berlin", street: "Jägerstraße 32", postcode: 10117, domain: "activision.com" }
+            { name: "343 Industries", city: "Berlin", street: "Storkower 32", postcode: 10407, domain: "343industries.com" }
+            { name: "Bethesda Game Studios", city: "Frankfurt am Main", street: "Goldsteinstraße 2", postcode: 10127, domain: "bethesda.net" }
+            { name: "Epic Games", city: "Berlin", street: "Unter den Linden 300", postcode: 10317, domain: "epicgames.com" }
+            { name: "Guerrilla Games", city: "Berlin", street: "Rudi-Dutschke-Straße 26", postcode: 10969, domain: "guerrilla-games.com" }
+            { name: "Riot Games", city: "Frankfurt am Main", street: "Vossstrasse 23", postcode: 10117, domain: "activision.com" }
+            { name: "Santa Monica Studio", city: "Berlin", street: "Friedrichstraße 219", postcode: 10969, domain: "activision.com" }
             ]
-
+            { name: "Activision Blizzard", city: "Berlin", street: "Jägerstraße 32", postcode: 10117, domain: "activision.com" }
+            ]
 
 recruiters = []
 8.times do |index|
