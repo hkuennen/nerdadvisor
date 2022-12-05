@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :jobs do
-    resources :applications
+    resources :applications, only: [:new, :create, :show, :index]
   end
-  resources :pages
+  resources :applications, only: [:destroy]
+  resources :pages, only: [:index, :show]
 
 end

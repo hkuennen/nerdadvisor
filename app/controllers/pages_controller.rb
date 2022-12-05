@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def index
     @applications = Application.all
+    @jobs = Job.all
   end
 
 end

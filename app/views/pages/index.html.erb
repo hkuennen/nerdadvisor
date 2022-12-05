@@ -20,6 +20,7 @@
             <p> <%= application.job.title  %></p>
             <p> <%= application.job._type  %>: €<%=application.job.salary%>/year </p>
             <p> You sent application on <%= application.created_at.strftime("%A, %d %b %Y at %l:%M %p GMT")  %></p>
+            <%= link_to raw("<i class=\"fa-solid fa-trash-can\"></i>"), application_path(application), data: { turbo_method: :delete } %>
           </div>
         </div>
       </div>
