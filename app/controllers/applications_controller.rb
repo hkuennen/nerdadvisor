@@ -29,10 +29,15 @@ class ApplicationsController < ApplicationController
   end
 
   def destroy
+    if @application.cv.attached?
+      @application.cv.purge
+    end
+    if @application.coverLetter.attached?
+      @application.coverLetter.purge
+    end
     @application.destroy
     redirect_to pages_path, status: :see_other
   end
-
 
   private
 
