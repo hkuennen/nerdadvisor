@@ -17,7 +17,7 @@
             <%= link_to "Search Jobs", jobs_path, class: "nav-link", data: {turbo: false} %>
           </li>
           <li class="nav-item">
-            <%= link_to "Events", events_path, class: "nav-link", data: {turbo: false} %>
+            <%= link_to "Events", events_path, class: "nav-link" %>
           </li>
           <% if user_signed_in? %>
           <li class="nav-item dropdown">
