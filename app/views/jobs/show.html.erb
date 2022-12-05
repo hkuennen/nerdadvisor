@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%= render "shared/navbar" %>
 
 <div class="hero" style="background-image: url(https://images.pexels.com/photos/7776881/pexels-photo-7776881.jpeg)">
@@ -28,9 +27,7 @@
 
         <p>We thank you for your interest, however, only those candidates selected for an interview will be contacted. <strong>No agencies please.</strong></p>
         <br><br>
-        <button type="button" class="btn col-3 btn-secondary1">
-          <%= link_to "Apply", new_job_application_path(params[:id]), style:"text-decoration:none; color:#f9fafc; font-weight:bold"%>
-        </button>
+        <%= link_to "Apply", new_job_application_path(params[:id]), style:"text-decoration:none; color:#f9fafc; font-weight:bold", class:"btn col-3 btn-secondary1" %>
         <button type="button" class="btn col-3 btn-secondary2">
           <a style="text-decoration:none; color:#f9fafc; font-weight:bold" href="#">Save</a>
         </button>
