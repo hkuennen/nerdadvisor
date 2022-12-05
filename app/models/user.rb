@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :jobs
   has_many :applications
+  has_many :events
   has_one_attached :image
 
   validates :firstName, presence: true
