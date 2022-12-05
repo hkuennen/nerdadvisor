@@ -2,14 +2,14 @@ class EventsController < ApplicationController
   before_action :set_user
   before_action :set_event, only: [:destroy]
 
-
   def index
     @events = Event.all
     @markers = @events.geocoded.map do |event|
       {
         lat: event.latitude,
         lng: event.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {event: event})
+        info_window: render_to_string(partial: "info_window", locals: { event: event }),
+        image_url: helpers.asset_url("marker.png")
       }
     end
   end

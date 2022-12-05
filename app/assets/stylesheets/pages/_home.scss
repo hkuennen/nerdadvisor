@@ -29,6 +29,10 @@ h5 {
   border: 1px solid #10F6B7;
 }
 
+#login:hover {
+  border: 1px solid #f9fafc;
+}
+
 .mapboxgl-popup {
   max-width: 200px;
 }
@@ -36,4 +40,11 @@ h5 {
 .mapboxgl-popup-content {
   text-align: center;
   font-family: "Open Sans", sans-serif;
+}
+
+.sticky-map {
+  width: 100%;
+  height: 150vh;
+  position: sticky;
+  top: 0;
 }
