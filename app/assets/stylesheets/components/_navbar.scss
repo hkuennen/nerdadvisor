@@ -6,23 +6,29 @@
   z-index: 10;
   width: 100vw;
   font-family: 'Press Start 2P', cursive;
+  background-image: url(https://images.pexels.com/photos/7776881/pexels-photo-7776881.jpeg);
+  background-size: cover;
+  background-position: 50% 46%;
 }
 
-.navbar-lewagon-scroll {
-  background-color: #f9fafc;
-  opacity: 0.9;
-
-  a.nav-link {
-    color: $pink;
-  }
-}
-
-.navbar-lewagon .navbar-collapse {
+.navbar-lewagon .navbar-collapse,
+.main-navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-lewagon .navbar-brand img,
+.main-navbar .navbar-brand img {
   width: 30%;
+}
+
+.main-navbar {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  font-family: 'Press Start 2P', cursive;
 }
 
 #nav-homepage {
@@ -42,7 +48,8 @@ a.nav-link:hover {
 }
 
 .nav-item {
-  margin-right: 20px;
+  margin-right: 10px;
+  font-size: 12px;
 }
 
 .btn-link {

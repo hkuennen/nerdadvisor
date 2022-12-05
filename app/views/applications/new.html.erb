@@ -1,5 +1,6 @@
-<div class="hero" style="background-image: url(https://images.pexels.com/photos/7776881/pexels-photo-7776881.jpeg)">
-<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:80px">
+<%= render "shared/navbar" %>
+
+<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px">
 <div class="container" data-controller="coin-sound">
   <div class="detail-card">
     <div class="box box-show" id="box-application">
@@ -13,12 +14,12 @@
               <p><strong>Last Name:</strong> <%= @user.lastName %></p>
               <%= f.input :cv, label: "CV", as: :file, required: true %>
               <%= f.input :coverLetter, label: "Cover Letter", as: :file %>
-              <%= f.submit "Submit", class: "btn btn-success my-4 btn-link", style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
+              <%= f.submit "Submit", class: "btn col-3 btn-secondary1", style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
             <% end %>
         </div>
 
         <div>
-          <%= link_to "Back to all Jobs", jobs_path, class: "btn btn-primary my-4", style:"text-shadow: 1px 1px #D217D9; text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
+          <%= link_to "Back to all Jobs", jobs_path, class: "btn col-3 btn-secondary2", style:"text-shadow: 1px 1px #D217D9; text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px" %>
         </div>
       </div>
     </div>

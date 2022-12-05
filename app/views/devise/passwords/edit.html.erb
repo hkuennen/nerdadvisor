@@ -1,4 +1,7 @@
-<div class="hero" style="background-image: url(https://images.pexels.com/photos/7776881/pexels-photo-7776881.jpeg)">
+<%= render "shared/navbar" %>
+
+<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px">
+
 <h2>Change your password</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
