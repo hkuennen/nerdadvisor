@@ -26,7 +26,7 @@
                 <br>
                 <%= event.date.strftime("%A, %d %b %Y at %l:%M %p GMT")  %>
               </div>
-              <%= link_to raw("<i class=\"fa-solid fa-trash-can\"></i>"), event_path(event), data: { turbo_method: :delete } %>
+              <%= link_to raw("<i class=\"fa-solid fa-trash-can\"></i>"), event_path(event), data: { turbo_method: :delete }, class:"trash-hover" %>
             </div>
           </div>
         </div>
