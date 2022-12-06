@@ -2,7 +2,7 @@ class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    @jobs = Job.all
+    @jobs = Job.page(params[:page]).per(7)
     @jobs = @jobs.where("title ILIKE :title", title: "%#{params[:title]}%") if params[:title].present?
     @jobs = @jobs.where("city ILIKE :city", city: "%#{params[:city]}%") if params[:city].present?
     if params[:ft] || params[:pt] || params[:fl] || params[:is] || params[:ws]
@@ -14,6 +14,7 @@ class JobsController < ApplicationController
       @filtered_jobs << @jobs.where(_type: params[:ws]) if params[:ws]
       @jobs = @filtered_jobs.flatten
     end
+
   end
 
   def show

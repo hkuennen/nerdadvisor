@@ -183,8 +183,7 @@ puts "Creating jobs..."
 
   Job.create!({ title: "Game Designer", desc: "We are looking for an experienced Game Designer to take good care of the balancing for our newest game’s systems and economy and work together with our core team based in Berlin. We accept remote only candidates but also support moving to Berlin.", _type: "Fulltime", startDate: Date.new(2023,02,01), salary: 77500, city: bethesda.city, user_id: juan.id, employer_id: bethesda.id })
 
-  Job.create!({ title: "Unity Game Engineer", desc: "As Unity Game Engineer, you will actively help to shape an exciting area of our company and you will be one of the driving forces in the development of games for our web platform. Together with members of our Product, Art, Backend, QA, Game Design as well as Marketing teams, you will create an...
-", _type: "Working Student", startDate: Date.new(2023,02,01), salary: 17500, city: santaMonica.city, user_id: adi.id, employer_id: santaMonica.id })
+  Job.create!({ title: "Unity Game Engineer", desc: "As Unity Game Engineer, you will actively help to shape an exciting area of our company and you will be one of the driving forces in the development of games for our web platform. Together with members of our Product, Art, Backend, QA, Game Design as well as Marketing teams, you will create an...", _type: "Working Student", startDate: Date.new(2023,02,01), salary: 17500, city: santaMonica.city, user_id: adi.id, employer_id: santaMonica.id })
 
   Job.create!({ title: "Senior Software Engineer", desc: "We are looking for a Senior Software Engineer who loves solving complex problems and has a passion for translating complex data into an intuitive UI experience.", _type: "Fulltime", startDate: Date.new(2023,02,01), salary: 17500, city: squareEnix.city, user_id: aj.id, employer_id: squareEnix.id })
 
@@ -216,16 +215,15 @@ puts "Creating applications..."
 puts "Applications created!"
 
 puts "Creating Events..."
-  Event.create!({ user_id: users[0].id, title: "Clash of Nerds", desc: "Backstage Beat 'Em Hub! Chilled & Casual Gaming Sesh at Sisyfass after an amazing year. Anyone who wants to just meet up, chat and have some drinks while enjoying some chilled gaming, come by!.", venue: "Sisyfass", date: DateTime.new(2022, 8, 10.5), address: "Wildenbruchstr. 7, 12045 Berlin" })
+  Event.create!({ user_id: users[0].id, title: "Clash of Nerds", desc: "Backstage Beat 'Em Hub! Chilled & Casual Gaming Sesh at Sisyfass after an amazing year. Anyone who wants to just meet up, chat and have some drinks while enjoying some chilled gaming, come by!.", _type: "Freelancer", startDate: Date.new(2023,02,01), salary: 27500, city: bethesda.city, user_id: hinnerk.id, employer_id: bethesda.id })
 
-  Event.create!({ user_id: users[1].id, title: "Nerdistan Arcade Bash", desc: "Retro gaming stations, arcade machines, tournament, drinks and old school nerding served as always with great vibes. The event starts at 19.00, tournament starts at 21.00. ", venue: "Alte Kantine", date: DateTime.new(2022, 8, 10.5), address: "Knaackstraße 97, 10435 Berlin" })
+  Event.create!({ user_id: users[1].id, title: "Nerdistan Arcade Bash", desc: "Retro gaming stations, arcade machines, tournament, drinks and old school nerding served as always with great vibes. The event starts at 19.00, tournament starts at 21.00. ", _type: "Fulltime", startDate: Date.new(2023,02,01), salary: 97500, city: nintendo.city, user_id: adi.id, employer_id: nintendo.id })
 
-  Event.create!({ user_id: users[2].id, title: "Game Creators Hangout", desc: "Es ist Zeit für einen Game Creators Hangout ! Der Game Creators Hangout ist ein Ort, an dem sich Spieleschaffende treffen, um über Spiele, das Leben und das Universum zu sinieren.", venue: "Internship", date: DateTime.new(2022, 8, 10.5), address: "Lychener Str 39, 10437 Berlin" })
+  Event.create!({ user_id: users[2].id, title: "Game Creators Hangout", desc: "The ideal candidate will have experience of full development lifecycles on at least one AAA game title, and will be placed in charge of key areas of the game at every phase from its early development; a successful candidate will translate the game vision set by the Game Director into compelling experiences.", _type: "Internship", startDate: Date.new(2023,02,01), salary: 37504, city: guerrilla.city, user_id: juan.id, employer_id: guerrilla.id })
 
-  Event.create!({ user_id: users[3].id, title: "Nerd beer night", desc: "Do you like to learn about nerdy topics? What is artificial intelligence, and where is it headed? Are we alone in the universe, or are there other forms of life out there (Fermi paradox)?", venue: "Castle Mitte", date: DateTime.new(2022, 8, 10.5), address: "Invalidenstraße 129, 10115 Berlin" })
+  Event.create!({ user_id: users[3].id, title: "Nerd beer night", desc: "Educator to join our faculty in support of our popular Game Production Management program embedded within Champlain's renowned Game Studio. The Stiller School's mission is to develop the strengths, integrity, expertise and entrepreneurial mindset of aspiring and innovative professionals to create positive change in their lives, workplaces, communities, and the world.", _type: "Working Student", startDate: Date.new(2023,02,01), salary: 10100, city: squareEnix.city, user_id: hinnerk.id, employer_id: squareEnix.id })
 
 puts "Events created!"
 
-events = Event.all
 
 puts "Database seeded!"
