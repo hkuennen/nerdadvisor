@@ -21,7 +21,7 @@
             <div class="pt-4 pb-4">
               <% if @application.cv.attached? %>
                 <p>CV uploaded:</p>
-                <%= cl_image_tag @application.cv.key, width: "200px", class: "pdf" %>
+                <%= cl_image_tag @application.cv.key, width: "200px", class: "pdf", format: "jpg" %>
               <% else %>
                 <p class="txt-sm"><em>[No CV uploaded.]</em></p>
               <% end %>
@@ -29,7 +29,7 @@
             <div class="pt-4 pb-4">
               <% if @application.coverLetter.attached? %>
                 <p>Cover Letter uploaded:</p>
-                <%= cl_image_tag @application.coverLetter.key, width: "200px", class: "pdf" %>
+                <%= cl_image_tag @application.coverLetter.key, width: "200px", class: "pdf", format: "jpg" %>
               <% else %>
                 <p class="txt-sm"><em>[No Cover Letter uploaded.]</em></p>
               <% end %>
