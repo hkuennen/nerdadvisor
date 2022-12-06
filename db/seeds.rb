@@ -40,16 +40,22 @@ end
 
 puts "Creating users..."
 password = "123456"
-hinnerk = User.create!({ email: "hinnerk@nerdadvisor.org", password: password, firstName: "Hinnerk", lastName: "Künnen", city: "Berlin", category: "IT Consultant", skills: ["Python", "JavaScript"], role: "Job Seeker" })
+hinnerk = User.create!({ email: "hinnerk@nerdadvisor.org", password: password, firstName: "Hinnerk", lastName: "Künnen", city: "Berlin", category: "Engineer", skills: ["Machine Learning", "Workflow Development", "Web Development", "Technical Documentation", "JavaScript", "React", "SQL", "Problem Solving", "Debugging", "Troubleshooting"],
+  linkedin: "www.linkedin.com/in/hinnerkkuennen/", github: "https://github.com/hkuennen", desc: "Graduated with an Economics degree, I am a former IT Consultant looking for a new job as a Backend / Full Stack Developer and changing career paths.
+  Also, I consider myself a Python enthusiast keen to learn a new programming language in the Web Development world and shaping the digital future. In my leisure time, you'll find me at Lerchen&Eulen drinking margaritas.", role: "Job Seeker" })
 hinnerk.image.attach(io: File.open("app/assets/images/users/hinnerk.jpg"), filename: "hinnerk.jpg", content_type: "image/jpg")
 
-aj = User.create!({ email: "aj@nerdadvisor.org", password: password, firstName: "Arjuna", lastName: "Sathianathan", city: "Berlin", category: "Business Developer", skills: ["Ruby on Rails", "JavaScript"], role: "Job Seeker" })
+aj = User.create!({ email: "aj@nerdadvisor.org", password: password, firstName: "Arjuna", lastName: "Sath", city: "Berlin", category: "Project Manager", skills: ["Web Development", "Programming", "Product Development", "Business Development", "Ruby on Rails", "Problem Solving", "Debugging"],
+  linkedin: "www.linkedin.com/in/ajsath/", github: "https://github.com/ajsath", desc: "A marketing & business development veteran with 10+ years of service. Given my computer science background and continuation of full stack development, I strive to have a
+  strong understanding of multiple departments (Product, Marketing, Sales, Coding, Design, Business Development, etc.) to better manage projects and understand through first-hand experience, the responsibilities/duties that my peers & colleagues carry.", role: "Job Seeker" })
 aj.image.attach(io: File.open("app/assets/images/users/aj.jpg"), filename: "aj.jpg", content_type: "image/jpg")
 
-adi = User.create!({ email: "adi@nerdadvisor.org", password: password, firstName: "Luthfi Aditya", lastName: "Pratomo", city: "Berlin", category: "Marketing Manager", skills: ["CSS", "JavaScript"], role: "Job Seeker" })
+adi = User.create!({ email: "adi@nerdadvisor.org", password: password, firstName: "Luthfi Aditya", lastName: "Pratomo", city: "Berlin", category: "Artist", skills: ["Web Development", "Front-end", "Product Design", "Graphic Design", "Product Marketing", "Problem Solving", "Debugging", "Prototyping"],
+  linkedin: "https://www.linkedin.com/in/luthfipratomo/", github: "https://github.com/Lapratomo24", desc: "I was a Marketing Manager until 30.09. I decided to resign to be able to join Le Wagon and learn how to code. I would like to switch my career and become a web developer.", role: "Job Seeker" })
 adi.image.attach(io: File.open("app/assets/images/users/adi.jpg"), filename: "adi.jpg", content_type: "image/jpg")
 
-juan = User.create!({ email: "juan@nerdadvisor.org", password: password, firstName: "Juan",lastName: "Hurtado", city: "Berlin", category: "Actor", skills: ["Ruby on Rails", "JavaScript"], role: "Job Seeker" })
+juan = User.create!({ email: "juan@nerdadvisor.org", password: password, firstName: "Juan",lastName: "Hurtado", city: "Berlin", category: "Sound", skills: ["Web Development", "Singing", "Musician", "Voice Acting", "Theatre", "Writer", "Actor", "Problem Solving", "Debugging"], github: "https://github.com/SUMAJU",
+  desc: "My name is Juan, I'm 35 years old and I'm from Argentina. I am an actor, theatre director and writer. My wish is to be able to get a job with programming that allows me more independence.", role: "Job Seeker" })
 juan.image.attach(io: File.open("app/assets/images/users/juan.jpg"), filename: "juan.jpg", content_type: "image/jpg")
 puts "Users created!"
 
@@ -183,8 +189,7 @@ puts "Creating jobs..."
 
   Job.create!({ title: "Game Designer", desc: "We are looking for an experienced Game Designer to take good care of the balancing for our newest game’s systems and economy and work together with our core team based in Berlin. We accept remote only candidates but also support moving to Berlin.", _type: "Fulltime", startDate: Date.new(2023,02,01), salary: 77500, city: bethesda.city, user_id: juan.id, employer_id: bethesda.id, companySize: "300 - 450", category: "Developer", onsite: "On-Site" })
 
-  Job.create!({ title: "Unity Game Engineer", desc: "As Unity Game Engineer, you will actively help to shape an exciting area of our company and you will be one of the driving forces in the development of games for our web platform. Together with members of our Product, Art, Backend, QA, Game Design as well as Marketing teams, you will create an...
-", _type: "Working Student", startDate: Date.new(2023,02,01), salary: 17500, city: santaMonica.city, user_id: adi.id, employer_id: santaMonica.id, companySize: "200 - 250", category: "Engineer", onsite: "Remote" })
+  Job.create!({ title: "Unity Game Engineer", desc: "As Unity Game Engineer, you will actively help to shape an exciting area of our company and you will be one of the driving forces in the development of games for our web platform. Together with members of our Product, Art, Backend, QA, Game Design as well as Marketing teams, you will create an...", _type: "Working Student", startDate: Date.new(2023,02,01), salary: 17500, city: santaMonica.city, user_id: adi.id, employer_id: santaMonica.id, companySize: "200 - 250", category: "Engineer", onsite: "Remote" })
 
   Job.create!({ title: "Senior Software Engineer", desc: "We are looking for a Senior Software Engineer who loves solving complex problems and has a passion for translating complex data into an intuitive UI experience.", _type: "Fulltime", startDate: Date.new(2023,02,01), salary: 17500, city: squareEnix.city, user_id: aj.id, employer_id: squareEnix.id, companySize: "3000 - 5700", category: "Engineer", onsite: "Remote" })
 
