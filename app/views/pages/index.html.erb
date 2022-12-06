@@ -1,7 +1,7 @@
 <%= render "shared/navbar" %>
 
 <div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px; min-height:100vh;">
-  <h1 class="text-center my-4">Your Applications</h1>
+  <h1 class="text-center my-4"><%= @user.firstName %>'s Profile</h1>
   <div class="container d-flex flew-row better-margin">
     <div class="col-4">
       <div class="avatar-dash">
@@ -14,17 +14,26 @@
           <label for="tab2-1">Profile</label>
           <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
           <div class="tab-text">
-            <h4>Profile</h4>
-              <p>Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius. Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum vel aliquet nunc.</p>
+            <h3>Main Description</h3>
+              <p><%= @user.desc %></p>
           </div>
         </div>
         <div class="tab-2">
           <label for="tab2-2">Skills</label>
           <input id="tab2-2" name="tabs-two" type="radio">
           <div class="tab-text">
-            <h4>Skills</h4>
-              <p>Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius. Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum vel aliquet nunc.</p>
-          </div>
+            <h3>Skills</h3>
+            <h4>Category: <%= @user.category%></h4>
+              <ul>
+              <li><p><%= @user.skills[0]%></p></li>
+              <li><p><%= @user.skills[1]%></p></li>
+              <li><p><%= @user.skills[2]%></p></li>
+              <li><p><%= @user.skills[3]%></p></li>
+              <li><p><%= @user.skills[4]%></p></li>
+              <li><p><%= @user.skills[5]%></p></li>
+              <li><p><%= @user.skills[6]%></p></li>
+              </ul>
+            </div>
         </div>
         <div class="tab-2">
           <label for="tab2-3">Application</label>
@@ -44,7 +53,8 @@
                     <p> <%= application.job.title  %></p>
                     <p> <%= application.job._type  %>: €<%=application.job.salary%>/year </p>
                     <p> You sent application on <%= application.created_at.strftime("%A, %d %b %Y at %l:%M %p GMT")  %></p>
-                    <%= link_to raw("<i class=\"fa-solid fa-trash-can\"></i>"), application_path(application), data: { turbo_method: :delete } %>
+                     Status: In Progress. Employer Reviewing.
+                    <p><%= link_to raw("<i class=\"fa-solid fa-trash-can\"></i>"), application_path(application), data: { turbo_method: :delete } %></p>
                   </div>
                 </div>
               </div>
