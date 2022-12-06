@@ -9,19 +9,31 @@
           <div class="pb-4">
             <%= cl_image_tag @application.employer.image.key, height: "40px" %>
           </div>
-          <h2>Application summary</h2>
-          <h4>Name: <em><%= "#{@application.user.firstName} #{@application.user.lastName}" %></em></h4>
-          <h4>Job: <em><%= @application.job.title %></em></h4>
-          <h4>Company: <em><%= @application.employer.companyName %></em></h4>
-          <h4>Location: <em><%= @application.job.city %></em></h4>
-          <h4># of applicants: <em><%= Application.where(job_id: @application.job.id).count %></em></h4>
-          <div class="pt-4 pb-4">
-            <% if @application.cv.attached? %>
-              <h4>CV uploaded:</h4>
-              <%= cl_image_tag @application.cv.key, width: "200px", id: "cv" %>
-            <% else %>
-              <h4><em>[No CV uploaded.]</em></h4>
-            <% end %>
+          <div class="line-hgt">
+            <h2 class="pb-3">Application summary</h2>
+            <p>Name: <em><%= "#{@application.user.firstName} #{@application.user.lastName}" %></em></p>
+            <p>Job: <em><%= @application.job.title %></em></p>
+            <p>Company: <em><%= @application.employer.companyName %></em></p>
+            <p>Location: <em><%= @application.job.city %></em></p>
+            <p># of applicants: <em><%= Application.where(job_id: @application.job.id).count %></em></p>
+          </div>
+          <div class="d-flex justify-content-around align-items-center">
+            <div class="pt-4 pb-4">
+              <% if @application.cv.attached? %>
+                <p>CV uploaded:</p>
+                <%= cl_image_tag @application.cv.key, width: "200px", class: "pdf" %>
+              <% else %>
+                <p class="txt-sm"><em>[No CV uploaded.]</em></p>
+              <% end %>
+            </div>
+            <div class="pt-4 pb-4">
+              <% if @application.coverLetter.attached? %>
+                <p>Cover Letter uploaded:</p>
+                <%= cl_image_tag @application.coverLetter.key, width: "200px", class: "pdf" %>
+              <% else %>
+                <p class="txt-sm"><em>[No Cover Letter uploaded.]</em></p>
+              <% end %>
+            </div>
           </div>
           <p><%= link_to "Check dashboard", pages_path %></p>
         </div>
