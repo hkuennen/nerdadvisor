@@ -1,30 +1,38 @@
 <%= render "shared/navbar" %>
 
-<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px">
-<h1 class="text-center mb-4">Your Applications</h1>
-
-<div class="container d-flex flex-row">
-  <div class="mt-5">
-    <img src="https://media2.giphy.com/media/lhvyCCcFuQFKo/giphy.gif" width="200px" />
-  </div>
-
-  <div class="row justify-content-center">
-    <% @applications.each do |application| %>
-      <div class="box" style="width:50%; height:260px">
-        <span></span>
-        <div class="content d-flex flex-row" style="gap: 20px">
-          <div class="mt-5">
-            <%= cl_image_tag application.employer.image.key, height: "40px" %>
+<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px; min-height:120vh;">
+  <h1 class="text-center my-4">Your Applications</h1>
+  <div class="container d-flex flew-row better-margin">
+    <div class="col-3">
+      <h1>HELLO</h1>
+    </div>
+    <div class="container">
+      <div class="tabs">
+        <div class="tab-2">
+          <label for="tab2-1">One</label>
+          <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+          <div class="tab-text">
+            <h4>Tab One</h4>
+              <p>Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius. Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum vel aliquet nunc.</p>
           </div>
-          <div>
-            <h4> Application #<%= application.id  %></h4>
-            <p> <%= application.job.title  %></p>
-            <p> <%= application.job._type  %>: €<%=application.job.salary%>/year </p>
-            <p> You sent application on <%= application.created_at.strftime("%A, %d %b %Y at %l:%M %p GMT")  %></p>
-            <%= link_to raw("<i class=\"fa-solid fa-trash-can\"></i>"), application_path(application), data: { turbo_method: :delete } %>
+        </div>
+        <div class="tab-2">
+          <label for="tab2-2">Two</label>
+          <input id="tab2-2" name="tabs-two" type="radio">
+          <div class="tab-text">
+            <h4>Tab Two</h4>
+              <p>Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius. Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum vel aliquet nunc.</p>
+          </div>
+        </div>
+        <div class="tab-2">
+          <label for="tab2-3">Three</label>
+          <input id="tab2-3" name="tabs-two" type="radio">
+          <div class="tab-text">
+            <h4>Tab Three</h4>
+              <p>Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius. Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum vel aliquet nunc.</p>
           </div>
         </div>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
