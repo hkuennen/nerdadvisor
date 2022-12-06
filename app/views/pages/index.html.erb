@@ -42,18 +42,19 @@
             <h4 class="text-center mb-4">Application</h4>
             <div class="row justify-content-center" id="more-application">
               <% @applications.each do |application| %>
-              <div class="box" style="width:70%; height:260px">
+              <div class="box" style="width:80%; height:300px">
                 <span></span>
-                <div class="content d-flex flex-row" style="gap: 20px">
-                  <div class="mt-5">
-                    <%= cl_image_tag application.employer.image.key, height: "40px" %>
+                <div class="content d-flex flex-row" style="gap: 30px">
+                  <div class="mt-1">
+                    <%= cl_image_tag application.employer.image.key, width: "70%" %>
+                    <p class="mt-2"> Application #<%= application.id %></p>
                   </div>
                   <div>
-                    <h4> Application #<%= application.id  %></h4>
-                    <p> <%= application.job.title  %></p>
+                    <h5> <%= application.job.title  %></h5>
                     <p> <%= application.job._type  %>: €<%=application.job.salary%>/year </p>
                     <p> You sent application on <%= application.created_at.strftime("%A, %d %b %Y at %l:%M %p GMT")  %></p>
                      Status: In Progress. Employer Reviewing.
+                    <hr>
                     <p><%= link_to raw("<i class=\"fa-solid fa-trash-can\"></i>"), application_path(application), data: { turbo_method: :delete } %></p>
                   </div>
                 </div>
