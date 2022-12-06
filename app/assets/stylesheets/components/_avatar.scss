@@ -19,11 +19,10 @@
   border: white 1px solid;
 }
 
-
 .avatar-dash {
-  height: 200px;
+  height: 350px;
   position: relative;
-  width: 200px;
+  width: 350px;
 }
 
 .avatar-dash img {
@@ -52,7 +51,7 @@
 .avatar-dash::before,
 .avatar-dash::after {
   animation: pulse 2s linear infinite;
-  border: #fff solid 8px;
+  border: #D217D9 solid 8px;
   border-radius: 9999px;
   box-sizing: border-box;
   content: ' ';
