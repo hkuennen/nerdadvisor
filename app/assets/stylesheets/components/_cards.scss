@@ -54,9 +54,15 @@
   transition: 0.5s;
 }
 
-#show-more {
+#show-more-text {
   max-height: 65px;
   overflow: auto;
+}
+
+#show-more-events {
+  max-height: 800px;
+  overflow: auto;
+  border: 2px solid #D217D9;
 }
 
 #box-application {
