@@ -60,22 +60,57 @@
               <div class="form-select bg-dark">
                 <select id="skills" name="skills" class="form-control bg-secondary">
                   <option>Sound</option>
-                  <option>Arts</option>
-                  <option>Coding</option>
+                  <option>Artist</option>
+                  <option>Developer</option>
+                  <option>Engineer</option>
                   <option>Sales</option>
-                  <option>Product</option>
                 </select></p>
               </div>
             </fieldset>
             <hr>
-            <fieldset>
-            <legend>Language</legend>
-              <div class="form-select bg-dark">
-                <select id="language" name="language" class="form-control bg-secondary">
-                  <option>English</option>
-                  <option>German</option>
-                  <option>Spanish</option>
-                </select></p>
+            <legend>Company Size</legend>
+              <div class="form-check bg-dark pt-1 pb-3">
+                <p>
+                  <input type="checkbox" id="tiny" name="tn" value="1-10" <%= "checked" if params[:tn] %> class="form-check-input bg-secondary">
+                  <label for="tiny" class="form-check-label">1 - 10</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="small" name="sm" value="11-50" <%= "checked" if params[:sm] %> class="form-check-input bg-secondary">
+                  <label for="small" class="form-check-label">11 - 50</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="medium" name="md" value="51-200" <%= "checked" if params[:md] %> class="form-check-input bg-secondary">
+                  <label for="medium" class="form-check-label">51 - 200</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="large" name="lg" value="201-500" <%= "checked" if params[:lg] %> class="form-check-input bg-secondary">
+                  <label for="large" class="form-check-label">201 - 500</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="x-large" name="xl" value="501-1000" <%= "checked" if params[:xl] %> class="form-check-input bg-secondary">
+                  <label for="x-large" class="form-check-label">501 - 1000</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="xx-large" name="xxl" value="1000+" <%= "checked" if params[:xxl] %> class="form-check-input bg-secondary">
+                  <label for="xx-large" class="form-check-label">1000+</label>
+                </p>
+              </div>
+            </fieldset>
+            <hr>
+            <legend>On-site</legend>
+              <div class="form-check bg-dark pt-1 pb-3">
+                <p>
+                  <input type="checkbox" id="on-site" name="os" value="On-site" <%= "checked" if params[:os] %> class="form-check-input bg-secondary">
+                  <label for="os" class="form-check-label">On-site</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="remote" name="rm" value="Remote" <%= "checked" if params[:rm] %> class="form-check-input bg-secondary">
+                  <label for="remote" class="form-check-label">Remote</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="hybrid" name="hy" value="Hybrid" <%= "checked" if params[:hy] %> class="form-check-input bg-secondary">
+                  <label for="hybrid" class="form-check-label">Hybrid</label>
+                </p>
               </div>
             </fieldset>
             <hr>
