@@ -12,7 +12,7 @@
           <form action="<%= jobs_path %>" method="GET">
             <fieldset>
             <legend>Results</legend>
-              <p class="bg-dark py-2">Found <strong><%= pluralize(@jobs.size, "job") %></strong></p>
+              <p class="bg-dark py-2">Found <strong><%= pluralize(@jobs.total_count, "job") %> </strong>within <strong><%= pluralize(@jobs.total_pages, "page") %></strong></p>
             </fieldset>
             <fieldset>
             <hr>
@@ -116,6 +116,7 @@
           </div>
         </div>
         <% end %>
+        <%= paginate @jobs %>
       </div>
     </div>
   </div>
