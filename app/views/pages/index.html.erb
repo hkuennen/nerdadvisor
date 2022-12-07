@@ -5,6 +5,7 @@
     <div class="col-4 ms-3">
       <div class="avatar-dash">
         <%= image_tag current_user.image %>
+        <h1 class="text-center" style="margin-top:60px;">LEVEL 1</h1>
           <div class="exp" data-controller="progress-bar" data-points="80">
             <span class="xp" data-progress-bar-target="xp"
             ></span>
@@ -14,8 +15,6 @@
       </div>
     <div class="col-8">
       <h1 class="text-center mb-4"><%= @user.firstName %>'s Profile </h1>
-          <h1 class="text-center mb-4">LEVEL 1</h1>
-
       <div class="tabs justify-content-center">
         <div class="tab-2">
           <label for="tab2-1">Profile</label>
