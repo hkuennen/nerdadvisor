@@ -4,6 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = [ "xp" ];
   xp = this.element.dataset.points;
+  levelUp = (this.element.dataset.levelUp === "true");
 
   connect() {
     const anim = this.xpTargets[0].getAnimations()[0].effect
@@ -45,6 +46,10 @@ export default class extends Controller {
     );
 
     console.log(anim.getKeyframes());
+
+    if (this.levelUp) {
+      console.log("User leveled up!");
+    }
   }
 
   levelUp() {
