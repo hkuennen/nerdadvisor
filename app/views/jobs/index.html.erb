@@ -13,7 +13,7 @@
             <form action="<%= jobs_path %>" method="GET">
               <fieldset>
               <legend class="play-font" style="font-size: larger;">Results</legend>
-                <p class="text-light py-2">Found <strong><%= pluralize(@jobs.size, "job") %> 
+                <p class="text-light py-2">Found <strong><%= pluralize(@jobs.size, "job") %>
                 <%# </strong>within <strong><%= pluralize(@jobs.total_pages, "page") %>
                 </strong></p>
               </fieldset>
@@ -34,33 +34,39 @@
               <fieldset>
               <hr>
               <legend class="play-font">Job Types</legend>
-                <div class="form-check bg-transparent pt-1 pb-3">
-                  <p>
-                    <input type="checkbox" id="fulltime" name="ft" value="Fulltime" <%= "checked" if params[:ft] %> class="form-check-input box-bg">
-                    <label for="fulltime" class="text-light form-check-label">Fulltime</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="parttime" name="pt" value="Parttime" <%= "checked" if params[:pt] %> class="form-check-input box-bg">
-                    <label for="parttime" class="text-light form-check-label">Parttime</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="freelancer" name="fl" value="Freelancer" <%= "checked" if params[:fl] %> class="form-check-input box-bg">
-                    <label for="freelancer" class="text-light form-check-label">Freelancer</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="internship" name="is" value="Internship" <%= "checked" if params[:is] %> class="form-check-input box-bg">
-                    <label for="internship" class="text-light form-check-label">Internship</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="working-student" name="ws" value="Working Student" <%= "checked" if params[:ws] %> class="form-check-input box-bg">
-                    <label for="working-student" class="text-light form-check-label">Working Student</label>
-                  </p>
+                <div class="form-check bg-transparent pt-1 pb-3 d-flex">
+                  <div class="flex-row">
+                    <p>
+                      <input type="checkbox" id="fulltime" name="ft" value="Fulltime" <%= "checked" if params[:ft] %> class="form-check-input box-bg">
+                      <label for="fulltime" class="text-light form-check-label">Fulltime</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="parttime" name="pt" value="Parttime" <%= "checked" if params[:pt] %> class="form-check-input box-bg">
+                      <label for="parttime" class="text-light form-check-label">Parttime</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="freelancer" name="fl" value="Freelancer" <%= "checked" if params[:fl] %> class="form-check-input box-bg">
+                      <label for="freelancer" class="text-light form-check-label">Freelancer</label>
+                    </p>
+                  </div>
+
+                  <div class="flex-row ms-5">
+                    <p>
+                      <input type="checkbox" id="internship" name="is" value="Internship" <%= "checked" if params[:is] %> class="form-check-input box-bg">
+                      <label for="internship" class="text-light form-check-label">Internship</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="working-student" name="ws" value="Working Student" <%= "checked" if params[:ws] %> class="form-check-input box-bg">
+                      <label for="working-student" class="text-light form-check-label">Working Student</label>
+                    </p>
+                  </div>
+
                 </div>
               </fieldset>
               <hr>
               <fieldset>
-              <legend class="play-font">Job Category</legend>
-                <div class="form-select bg-light">
+                <legend class="play-font">Job Category</legend>
+                <div class="form-select" style="background:linear-gradient(to right, #f731db, #4600f1); border:#4600f1">
                   <select id="skills" name="skills" class="form-control">
                     <option selected>Choose...</option>
                     <option>Sound</option>
@@ -68,53 +74,76 @@
                     <option>Developer</option>
                     <option>Engineer</option>
                     <option>Sales</option>
-                  </select></p>
+                  </select>
                 </div>
               </fieldset>
               <hr>
               <legend class="play-font">Company Size</legend>
                 <div class="form-check bg-transparent dark pt-1 pb-3">
-                  <p>
-                    <input type="checkbox" id="tiny" name="tn" value="1-10" <%= "checked" if params[:tn] %> class="form-check-input box-bg">
-                    <label for="tiny" class="text-light form-check-label">1 - 10</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="small" name="sm" value="11-50" <%= "checked" if params[:sm] %> class="form-check-input box-bg">
-                    <label for="small" class="text-light form-check-label">11 - 50</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="medium" name="md" value="51-200" <%= "checked" if params[:md] %> class="form-check-input box-bg">
-                    <label for="medium" class="text-light form-check-label">51 - 200</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="large" name="lg" value="201-500" <%= "checked" if params[:lg] %> class="form-check-input box-bg">
-                    <label for="large" class="text-light form-check-label">201 - 500</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="x-large" name="xl" value="501-1000" <%= "checked" if params[:xl] %> class="form-check-input box-bg">
-                    <label for="x-large" class="text-light form-check-label">501 - 1000</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="xx-large" name="xxl" value="1000+" <%= "checked" if params[:xxl] %> class="form-check-input box-bg">
-                    <label for="xx-large" class="text-light form-check-label">1000+</label>
-                  </p>
+                  <div>
+                    <div class="d-inline-block">
+                    <p>
+                      <input type="checkbox" id="tiny" name="tn" value="1-10" <%= "checked" if params[:tn] %> class="form-check-input box-bg">
+                      <label for="tiny" class="text-light form-check-label">1 - 10</label>
+                    </p>
+                    </div>
+                    <div class="d-inline-block ms-5">
+                      <p>
+                        <input type="checkbox" id="small" name="sm" value="11-50" <%= "checked" if params[:sm] %> class="form-check-input box-bg">
+                        <label for="small" class="text-light form-check-label">11 - 50</label>
+                      </p>
+                    </div>
+                    <div class="d-inline-block ms-5">
+                      <p>
+                        <input type="checkbox" id="medium" name="md" value="51-200" <%= "checked" if params[:md] %> class="form-check-input box-bg">
+                        <label for="medium" class="text-light form-check-label">51 - 200</label>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-inline-block">
+                    <p>
+                      <input type="checkbox" id="large" name="lg" value="201-500" <%= "checked" if params[:lg] %> class="form-check-input box-bg">
+                      <label for="large" class="text-light form-check-label">201 - 500</label>
+                    </p>
+                    </div>
+                    <div class="d-inline-block ms-5">
+                      <p>
+                        <input type="checkbox" id="x-large" name="xl" value="501-1000" <%= "checked" if params[:xl] %> class="form-check-input box-bg">
+                        <label for="x-large" class="text-light form-check-label">501 - 1000</label>
+                      </p>
+                    </div>
+                    <div class="d-inline-block ms-5">
+                      <p>
+                        <input type="checkbox" id="xx-large" name="xxl" value="1000+" <%= "checked" if params[:xxl] %> class="form-check-input box-bg">
+                        <label for="xx-large" class="text-light form-check-label">1000+</label>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </fieldset>
               <hr>
               <legend class="play-font">On-site</legend>
                 <div class="form-check bg-transparent pt-1 pb-3">
-                  <p>
-                    <input type="checkbox" id="on-site" name="os" value="On-site" <%= "checked" if params[:os] %> class="form-check-input box-bg">
-                    <label for="os" class="text-light form-check-label">On-site</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="remote" name="rm" value="Remote" <%= "checked" if params[:rm] %> class="form-check-input box-bg">
-                    <label for="remote" class="text-light form-check-label">Remote</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="hybrid" name="hy" value="Hybrid" <%= "checked" if params[:hy] %> class="form-check-input box-bg">
-                    <label for="hybrid" class="text-light form-check-label">Hybrid</label>
-                  </p>
+                  <div class="d-inline-block">
+                    <p>
+                      <input type="checkbox" id="on-site" name="os" value="On-site" <%= "checked" if params[:os] %> class="form-check-input box-bg">
+                      <label for="os" class="text-light form-check-label">On-site</label>
+                    </p>
+                  </div>
+                  <div class="d-inline-block ms-5">
+                    <p>
+                      <input type="checkbox" id="remote" name="rm" value="Remote" <%= "checked" if params[:rm] %> class="form-check-input box-bg">
+                      <label for="remote" class="text-light form-check-label">Remote</label>
+                    </p>
+                  </div>
+                  <div class="d-inline-block ms-5">
+                    <p>
+                      <input type="checkbox" id="hybrid" name="hy" value="Hybrid" <%= "checked" if params[:hy] %> class="form-check-input box-bg">
+                      <label for="hybrid" class="text-light form-check-label">Hybrid</label>
+                    </p>
+                  </div>
+
                 </div>
               </fieldset>
               <hr>
