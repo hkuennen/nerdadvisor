@@ -72,3 +72,35 @@ h5 {
 .better-margin {
   margin-top: 100px;
 }
+
+.exp {
+  position: relative;
+  width: 300px;
+  height: 20px;
+  border: 2px solid #999;
+  border-radius: 8px;
+  padding: 1px;
+  margin: 100px auto;
+  span {
+      display: inline-block;
+      height: 14px;
+      border-radius: 6px;
+      animation: xp 3s ease forwards;
+      opacity: 0.5;
+  }
+  .xp {
+      width: 50%;
+      height: 100%;
+  }
+}
+
+@keyframes xp {
+  from {
+    width: 0%;
+    background: $green;
+    }
+  to {
+    width: 50%;
+    background: $pink;
+    }
+}
