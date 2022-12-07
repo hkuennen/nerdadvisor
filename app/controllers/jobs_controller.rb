@@ -19,7 +19,9 @@ class JobsController < ApplicationController
       @jobs = Job.where(id: arr.map(&:id)) 
     end
 
-    @jobs = @jobs.where(category: params[:skills]) if (params[:skills] !== "Choose...")
+    if params[:skills].present? && params[:skills] != "Choose..."
+      @jobs = @jobs.where(category: params[:skills])
+    end
 
     if params[:tn] || params[:sm] || params[:md] || params[:lg] || params[:xl] || params[:xxl]
       @filtered_jobs_company_size = []
