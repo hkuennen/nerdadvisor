@@ -48,6 +48,6 @@ export default class extends Controller {
   }
 
   levelUp() {
-
+    
   }
 }

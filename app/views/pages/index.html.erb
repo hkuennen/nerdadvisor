@@ -5,16 +5,15 @@
     <div class="col-4 ms-3">
       <div class="avatar-dash">
         <%= image_tag current_user.image %>
-          <div class="exp" data-controller="progress-bar" data-points="80">
-            <span class="xp" data-progress-bar-target="xp"
-            ></span>
+          <div class="exp" data-controller="progress-bar" data-points="<%= @user.xp %>">
+            <span class="xp" data-progress-bar-target="xp"></span>
+            <h1><div class="scrollin text-center pb-3"></div></h1>
           </div>
-
         </div>
       </div>
     <div class="col-8">
       <h1 class="text-center mb-4"><%= @user.firstName %>'s Profile </h1>
-          <h1 class="text-center mb-4">LEVEL 1</h1>
+          <h1 class="text-center mb-4">LEVEL <%= @user.level %></h1>
 
       <div class="tabs justify-content-center">
         <div class="tab-2">
