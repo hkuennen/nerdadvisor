@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="progress-bar"
 export default class extends Controller {
   static targets = [ "xp" ];
-  xp = 100;
+  xp = this.element.dataset.points;
 
   connect() {
     const anim = this.xpTargets[0].getAnimations()[0].effect
@@ -45,5 +45,9 @@ export default class extends Controller {
     );
 
     console.log(anim.getKeyframes());
+  }
+
+  levelUp() {
+
   }
 }
