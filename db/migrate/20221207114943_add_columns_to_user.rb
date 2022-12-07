@@ -7,6 +7,7 @@ class AddColumnsToUser < ActiveRecord::Migration[7.0]
     add_column :users, :skills, :text, array: true, default: []
     add_column :users, :role, :string
     add_column :users, :xp, :integer
+    add_column :users, :level, :integer
     add_column :users, :linkedin, :string
     add_column :users, :github, :string
     add_column :users, :extraLink, :string
