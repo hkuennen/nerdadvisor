@@ -50,8 +50,10 @@ export default class extends Controller {
     }
 
     if (this.levelUp) {
-      this.avatarTargets.classList.add("shakey");
-      this.levelUpMore();
+      setTimeout(() => {
+        this.avatarTargets[0].classList.add("shakey");
+        this.levelUpMore();
+      }, 3000);
     }
   }
 
@@ -64,6 +66,6 @@ export default class extends Controller {
       },
       body: JSON.stringify({"levelup": "1"})
     })
-    setTimeout(() => location.reload(), 3000);
+    setTimeout(() => location.reload(), 1000);
   }
 }
