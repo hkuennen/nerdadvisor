@@ -7,11 +7,15 @@
 }
 
 .box-detail {
-  z-index: 10;
+  z-index: 2;
   padding: 40px 40px;
 }
 
 .link-text {
   text-decoration: none;
   color: #10F6B7;
+}
+
+.trash-hover:hover {
+  opacity: 0.6;
 }

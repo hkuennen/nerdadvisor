@@ -3,6 +3,14 @@ body {
   background-color: black;
 }
 
+.extra-padding1 {
+  padding-top: 100px;
+}
+
+.extra-padding2 {
+  padding-bottom: 100px;
+}
+
 h1 {
   color: $green;
   font-size: 20px;
@@ -55,10 +63,44 @@ h5 {
 
 #create-event {
   margin-bottom: 50px;
-  justify-items: center;
-  justify-content: center;
+}
+
+#create-event a {
+  color: #f9fafc;
 }
 
 .better-margin {
-  margin: 100px;
+  margin-top: 100px;
+}
+
+.exp {
+  position: relative;
+  width: 300px;
+  height: 20px;
+  border: 2px solid #999;
+  border-radius: 8px;
+  padding: 1px;
+  margin: 100px auto;
+  span {
+      display: inline-block;
+      height: 14px;
+      border-radius: 6px;
+      animation: xp 3s ease forwards;
+      opacity: 0.5;
+  }
+  .xp {
+      width: 50%;
+      height: 100%;
+  }
+}
+
+@keyframes xp {
+  from {
+    width: 0%;
+    background: $green;
+    }
+  to {
+    width: 50%;
+    background: $pink;
+    }
 }
