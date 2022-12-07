@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="progress-bar"
 export default class extends Controller {
-  static targets = [ "xp" ];
+  static targets = [ "xp", "avatar" ];
   xp = parseInt(this.element.dataset.points, 10);
   levelUp = (this.element.dataset.levelUp === "true");
 
@@ -50,7 +50,7 @@ export default class extends Controller {
     }
 
     if (this.levelUp) {
-      console.log("User leveled up!");
+      this.avatarTargets.classList.add("shakey");
       this.levelUpMore();
     }
   }
