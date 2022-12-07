@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :applications, only: [:destroy]
   resources :pages, only: [:index, :show]
 
+  post "/levelup", to: "pages#levelup"
 end
