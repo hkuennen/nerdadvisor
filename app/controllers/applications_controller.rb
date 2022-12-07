@@ -21,7 +21,11 @@ class ApplicationsController < ApplicationController
     @application.user_id = @user.id
     @application.job_id = @job.id
     @application.employer_id = @job.employer.id
+    @user.xp += 25
     if @application.save
+      if @application.coverLetter.attached?
+        @user.save
+      end
       redirect_to job_application_path(@application.job_id, @application.id), status: :see_other
     else
       render :new, status: :unprocessable_entity

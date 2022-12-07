@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="progress-bar"
 export default class extends Controller {
   static targets = [ "xp" ];
-  xp = this.element.dataset.points;
+  xp = parseInt(this.element.dataset.points, 10);
   levelUp = (this.element.dataset.levelUp === "true");
 
   connect() {
@@ -45,14 +45,24 @@ export default class extends Controller {
       }]
     );
 
-    console.log(anim.getKeyframes());
+    if (this.xp >= 100) {
+      this.levelUp = true;
+    }
 
     if (this.levelUp) {
       console.log("User leveled up!");
+      this.levelUpMore();
     }
   }
 
-  levelUp() {
-    
+  levelUpMore() {
+    fetch("/levelup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({"levelup": "1"})
+    })
   }
 }
