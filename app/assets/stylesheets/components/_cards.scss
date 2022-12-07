@@ -191,8 +191,9 @@
 }
 
 .card-product .card-product-infos {
-  padding-top: 16px;
-  background-color: #3c3b3b;
-  opacity: 1;
+  padding: 1rem;
+  position: relative;
+  background-color: #111;
+  padding: 3px;
   color: $green;
 }

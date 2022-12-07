@@ -19,3 +19,23 @@
 .trash-hover:hover {
   opacity: 0.6;
 }
+
+.module-border-wrap {
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, #f731db, #4600f1);
+  padding: 3px;
+}
+
+#search-text {
+  color: #f731db;
+}
+
+.play-font {
+  font-family: 'Press Start 2P', cursive;
+  font-size: medium;
+}
+
+.box-bg {
+  background-color: #10F6B7;
+}
