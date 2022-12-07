@@ -64,5 +64,6 @@ export default class extends Controller {
       },
       body: JSON.stringify({"levelup": "1"})
     })
+    setTimeout(() => location.reload(), 3000);
   }
 }
