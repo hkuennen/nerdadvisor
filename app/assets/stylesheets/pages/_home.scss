@@ -72,3 +72,62 @@ h5 {
 .better-margin {
   margin-top: 100px;
 }
+// XP status bar
+.exp {
+  position: relative;
+  width: 300px;
+  height: 20px;
+  border: 2px solid #999;
+  border-radius: 8px;
+  padding: 1px;
+  margin: 100px auto;
+  span {
+      display: inline-block;
+      height: 14px;
+      border-radius: 6px;
+      animation: xp 3s ease forwards;
+      opacity: 0.5;
+  }
+  .xp {
+      width: 50%;
+      height: 100%;
+  }
+}
+
+@keyframes xp {
+  from {
+    width: 0%;
+    background: $green;
+    }
+  to {
+    width: 50%;
+    background: $pink;
+    }
+}
+
+// scrolling
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.scrollin {
+  animation: counter 5s ease-in-out;
+  counter-reset: num var(--num);
+  font: "Press Start 2P";
+  padding: 2rem;
+}
+.scrollin::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 50;
+  }
+}

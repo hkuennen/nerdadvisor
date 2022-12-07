@@ -19,5 +19,8 @@ application.register("map", MapController)
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
 
+import ProgressBarController from "./progress_bar_controller"
+application.register("progress-bar", ProgressBarController)
+
 import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)
