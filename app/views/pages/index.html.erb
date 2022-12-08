@@ -3,12 +3,11 @@
 <div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px; min-height:100vh;">
   <div class="container d-flex flew-row better-margin">
     
-      <div class="avatar-dash" data-progress-bar-target="avatar">
+      <div class="avatar-dash" data-controller="progress-bar" data-points="<%= @user.xp %>" data-level-up="<%= @user.levelUp %>" data-progress-bar-target="avatar">
         <%= image_tag current_user.image %>
         <h1 class="text-center mb-4" style="margin-top: 70px;">LEVEL <%= @user.level %></h1>
-        <div class="exp" data-controller="progress-bar" data-points="<%= @user.xp %>" data-level-up="<%= @user.levelUp %>">
+        <div class="exp">
           <span class="xp" data-progress-bar-target="xp"></span>
-          <h1><div class="scrollin text-center pb-3"></div></h1>
         </div>
       </div>
     <div class="col-8">
