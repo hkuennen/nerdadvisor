@@ -14,8 +14,12 @@
       <div class="exp">
         <span class="xp" data-progress-bar-target="xp"></span>
       </div>
-      <div class="text-center mt-4">
-        <%# <h4 style="color:#10F6B7;">Class: Newbie</h4> %>
+      <div class="text-center">
+        <h4 style="color:#10F6B7;" class="my-4">Class: <%= @user._class %></h4>
+        <% if @user.level >= 2 %>
+          <p style="color:#10F6B7;">--> Unlocked New Feature!! <--</p>
+          <p style="color:#10F6B7;">+1 Visibility into # of Applicants</p>
+        <% end %>
       </div>
     </div>
 
@@ -71,8 +75,11 @@
                   <div class="col-8">
                     <h5> <%= application.job.title  %></h5>
                     <p> <%= application.job._type  %>: €<%=application.job.salary%>/year </p>
-                    <p> You sent application on <%= application.created_at.strftime("%A, %d %b %Y at %l:%M %p GMT")  %></p>
-                     Status: In Progress. Employer Reviewing.
+                    <p> You sent application on <%= application.created_at.strftime("%A, %d %b %Y at %l:%M %p GMT") %></p>
+                    Status: In Progress. Employer Reviewing.
+                    <% if @user.level >= 2 %>
+                      <p># of applicants: <strong><%= Application.where(job_id: application.job.id).count %></strong></p>
+                    <% end %>
                     <hr>
                     <p style="margin:0;"><%= link_to raw("<i class=\"fa-solid fa-trash-can\"></i>"), application_path(application), data: { turbo_method: :delete }, class:"trash-hover" %></p>
                   </div>

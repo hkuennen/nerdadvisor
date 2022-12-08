@@ -15,7 +15,9 @@
             <p>Job: <strong><%= @application.job.title %></strong></p>
             <p>Company: <strong><%= @application.employer.companyName %></strong></p>
             <p>Location: <strong><%= @application.job.city %></strong></p>
-            <p># of applicants: <strong><%= Application.where(job_id: @application.job.id).count %></strong></p>
+            <% if @user.level >= 2 %>
+              <p># of applicants: <strong><%= Application.where(job_id: @application.job.id).count %></strong></p>
+            <% end %>
           </div>
           <div class="d-flex justify-content-around align-items-center">
             <div class="pt-4 pb-4">
