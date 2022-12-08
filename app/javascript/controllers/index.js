@@ -10,9 +10,6 @@ application.register("coin-sound", CoinSoundController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import LevelupSoundController from "./levelup_sound_controller"
-application.register("levelup-sound", LevelupSoundController)
-
 import MapController from "./map_controller"
 application.register("map", MapController)
 
