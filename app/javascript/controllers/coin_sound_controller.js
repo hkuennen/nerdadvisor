@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import coinSound from "../../assets/sounds/coin.mp3"
+import coinSound from "../../assets/coin.mp3"
 
 // Connects to data-controller="sound"
 export default class extends Controller {
