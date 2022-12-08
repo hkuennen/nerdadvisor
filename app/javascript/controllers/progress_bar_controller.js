@@ -80,8 +80,6 @@ export default class extends Controller {
       this.pyroTargets[0].classList.remove("pyro");
       this.beforeTargets[0].classList.remove("before");
       this.afterTargets[0].classList.remove("after");
-      // this.logsTargets[0].innerHTML = "";
-      // this.logsTargets[0].insertAdjacentHTML("beforeend", log);
     }, 5000)
   }
 }
