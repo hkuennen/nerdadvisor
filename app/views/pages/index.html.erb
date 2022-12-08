@@ -6,9 +6,9 @@
   <div class="container d-flex flew-row better-margin">
     <div class="avatar-dash" data-controller="progress-bar" data-points="<%= @user.xp %>" data-level-up="<%= @user.levelUp %>" data-progress-bar-target="avatar">
       <%= image_tag current_user.image %>
-      <div class="pyro">
-        <div class="before"></div>
-        <div class="after"></div>
+      <div data-progress-bar-target="pyro">
+        <div data-progress-bar-target="before"></div>
+        <div data-progress-bar-target="after"></div>
       </div>
       <h1 class="text-center mb-4" style="margin-top: 70px;">LEVEL <%= @user.level %></h1>
       <div class="exp">
