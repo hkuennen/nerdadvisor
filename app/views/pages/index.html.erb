@@ -1,6 +1,7 @@
 <%= render "shared/navbar" %>
 
 <div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px; min-height:100vh;">
+
   <div class="container d-flex flew-row better-margin" style="margin-right: unset;">
     <div class="avatar-dash" data-controller="progress-bar" data-points="<%= @user.xp %>" data-level-up="<%= @user.levelUp %>" data-progress-bar-target="avatar">
       <%= image_tag current_user.image %>
@@ -9,6 +10,7 @@
         <span class="xp" data-progress-bar-target="xp"></span>
       </div>
     </div>
+
     <div class="col-8">
       <h1 class="text-center mb-4"><%= @user.firstName %>'s Profile </h1>
       <div class="tabs justify-content-end" style="margin-top: 50px;">
@@ -18,13 +20,7 @@
           <div class="tab-text">
             <h3 class="text-center pb-3">Main Description</h3>
               <p><%= @user.desc %></p>
-          </div>
-        </div>
-        <div class="tab-2">
-          <label for="tab2-2">Skills</label>
-          <input id="tab2-2" name="tabs-two" type="radio">
-          <div class="tab-text">
-            <h3 class="text-center pb-3">Skills</h3>
+              <h3 class="text-center pb-3">Skills</h3>
             <h4 class="text-center pb-3">Category: <%= @user.category%></h4>
             <ul class="text-center pb-3 list-unstyled">
               <li><p><%= @user.skills[0]%></p></li>
@@ -37,11 +33,14 @@
             </ul>
           </div>
         </div>
+
+
         <div class="tab-2">
-          <label for="tab2-3">Application</label>
-          <input id="tab2-3" name="tabs-two" type="radio">
+          <label for="tab2-2">Application</label>
+          <input id="tab2-2" name="tabs-two" type="radio">
           <div class="tab-text">
-            <h4 class="text-center mb-4">Application</h4>
+
+          <h4 class="text-center mb-4">Application</h4>
             <div class="row justify-content-center" id="more-application">
               <% @applications.each do |application| %>
               <div class="box">
@@ -58,6 +57,35 @@
                      Status: In Progress. Employer Reviewing.
                     <hr>
                     <p style="margin:0;"><%= link_to raw("<i class=\"fa-solid fa-trash-can\"></i>"), application_path(application), data: { turbo_method: :delete }, class:"trash-hover" %></p>
+                  </div>
+                </div>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-2">
+          <label for="tab2-3">Event</label>
+          <input id="tab2-3" name="tabs-two" type="radio">
+          <div class="tab-text">
+            <h4 class="text-center mb-4">Event</h4>
+            <div class="row justify-content-center" id="more-application">
+              <%# showing events  %>
+              <% @events.each do |event_id| %>
+              <% event = Event.find(event_id) %>
+              <div class="box">
+                <span></span>
+                <div class="content d-flex flex-row" style="gap: 30px">
+                  <div class="mt-1">
+                    <p class="mt-2"> Event #<%= event.id %></p>
+                  </div>
+                  <div>
+                    <h5> <%= event.title  %></h5>
+                    <p> <%= event.venue  %>: <%=event.desc%> </p>
+                    <p> The event is on <%= event.date.strftime("%A, %d %b %Y at %l:%M %p GMT")  %></p>
+                    <p> <%= event.attendees.count  %></p>
+                    <hr>
                   </div>
                 </div>
               </div>

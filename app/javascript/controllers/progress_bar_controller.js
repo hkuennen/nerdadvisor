@@ -1,10 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
+import levelupSound from "../../assets/level_up.mp3"
 
 // Connects to data-controller="progress-bar"
 export default class extends Controller {
   static targets = [ "xp", "avatar" ];
   xp = parseInt(this.element.dataset.points, 10);
   levelUp = (this.element.dataset.levelUp === "true");
+  sound = new Audio(levelupSound);
 
   connect() {
     const anim = this.xpTargets[0].getAnimations()[0].effect
@@ -52,6 +54,9 @@ export default class extends Controller {
     if (this.levelUp) {
       setTimeout(() => {
         this.avatarTargets[0].classList.add("shakey");
+        this.sound.load();
+        this.sound.play();
+        this.sound.currentTime = 0;
         this.levelUpMore();
       }, 3000);
     }
@@ -66,6 +71,9 @@ export default class extends Controller {
       },
       body: JSON.stringify({"levelup": "1"})
     })
-    setTimeout(() => location.reload(), 1000);
+    setTimeout(() => {
+      location.reload()
+      this.avatarTargets[0].classList.remove("shakey");
+    }, 1000);
   }
 }

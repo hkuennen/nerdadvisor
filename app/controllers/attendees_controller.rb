@@ -18,18 +18,13 @@ class AttendeesController < ApplicationController
   end
 
   def create
-    @attendee = Attendee.new(attendee_params)
-    @attendee.user_id = @user.id
-    @attendee.job_id = @job.id
-    @attendee.employer_id = @job.employer.id
-    render :new, status: :unprocessable_entity
-
-    # if @attendee.save
-    #   redirect_to job_application_path(@attendee.job_id, @application.id), status: :see_other
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    @attendee = Attendee.new
+    @attendee.user = @user
+    @attendee.event = @event
+    @attendee.save
   end
+
+  private
 
   def attendee_params
     params.require(:attendee).permit(:user_id, :event_id)
