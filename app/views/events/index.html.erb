@@ -1,7 +1,7 @@
 <%= render "shared/navbar" %>
 
-<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px; min-height: 120vh;">
-  <h1 class="text-center mb-5">Find exciting gaming events near you!</h1>
+<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px; min-height: 90vh;">
+  <h1 class="better-margin text-center mb-5">Find exciting gaming events near you!</h1>
   <div id="create-event" class="text-center">
     <%= link_to "Create New Event", new_event_path, class: "btn btn-secondary2" %>
   </div>
@@ -10,7 +10,7 @@
     <div class="container flex-row" id="show-more-events">
       <div class="col-6">
         <% @events.each do |event| %>
-        <div class="box mb-2" style="width: 150%">
+        <div class="box mb-2" style="width: 160%;">
           <span></span>
           <div class="content">
             <h5><img src="https://acegif.com/wp-content/uploads/2022/fzk5d/76-open-close-mouth.gif" width="20px" />
@@ -40,7 +40,7 @@
     </div>
     <div class="container flex-row">
       <div class="module-border-wrap">
-        <div class="rounded" style="width: 100%; height: 800px;"
+        <div class="rounded" style="width: 100%; height: 650px; position: sticky; top: 0;"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
