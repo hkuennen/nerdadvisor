@@ -1,12 +1,11 @@
 import { Controller } from "@hotwired/stimulus"
-import levelupSound from "../../assets/level_up.mp3"
 
 // Connects to data-controller="progress-bar"
 export default class extends Controller {
   static targets = [ "xp", "avatar" ];
   xp = parseInt(this.element.dataset.points, 10);
   levelUp = (this.element.dataset.levelUp === "true");
-  sound = new Audio(levelupSound);
+  sound = new Audio("/sounds/level_up.mp3");
 
   connect() {
     const anim = this.xpTargets[0].getAnimations()[0].effect
