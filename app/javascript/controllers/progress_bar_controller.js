@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import levelupSound from '../../../sounds/level_up.mp3'
+import levelupSound from "../../assets/level_up.mp3"
 
 // Connects to data-controller="progress-bar"
 export default class extends Controller {
