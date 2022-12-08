@@ -21,7 +21,10 @@ class AttendeesController < ApplicationController
     @attendee = Attendee.new
     @attendee.user = @user
     @attendee.event = @event
+    @user.xp += 25
     @attendee.save
+    @user.save
+    redirect_to events_path()
   end
 
   private

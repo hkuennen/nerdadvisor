@@ -14,7 +14,6 @@
               <fieldset>
               <legend class="play-font" style="font-size: larger;">Results</legend>
                 <p class="text-light py-2">Found <strong><%= pluralize(@jobs.size, "job") %>
-                <%# </strong>within <strong><%= pluralize(@jobs.total_pages, "page") %>
                 </strong></p>
               </fieldset>
               <fieldset>
@@ -185,7 +184,6 @@
           </div>
         </div>
         <% end %>
-          <%#= paginate @jobs%>
       </div>
     </div>
   </div>
