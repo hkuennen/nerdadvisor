@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="progress-bar"
 export default class extends Controller {
-  static targets = [ "xp", "avatar", "pyro", "before", "after" ];
+  static targets = [ "xp", "avatar", "pyro", "before", "after", "logs" ];
   xp = parseInt(this.element.dataset.points, 10);
   levelUp = (this.element.dataset.levelUp === "true");
   sound = new Audio("/sounds/level_up.mp3");
@@ -73,12 +73,15 @@ export default class extends Controller {
       },
       body: JSON.stringify({"levelup": "1"})
     })
+    // const log = "<h4 style=\"color:#10F6B7;\">Class: Rookie</h4><p style=\"color:#10F6B7;\">Unlocked New Feature!</p><p style=\"color:#10F6B7;\">+1 Visibility into # of Applicants</p>"
     setTimeout(() => {
       location.reload()
       this.avatarTargets[0].classList.remove("shakey");
       this.pyroTargets[0].classList.remove("pyro");
       this.beforeTargets[0].classList.remove("before");
       this.afterTargets[0].classList.remove("after");
-    }, 5000);
+      // this.logsTargets[0].innerHTML = "";
+      // this.logsTargets[0].insertAdjacentHTML("beforeend", log);
+    }, 5000)
   }
 }
