@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="progress-bar"
 export default class extends Controller {
-  static targets = [ "xp", "avatar" ];
+  static targets = [ "xp", "avatar", "pyro", "before", "after" ];
   xp = parseInt(this.element.dataset.points, 10);
   levelUp = (this.element.dataset.levelUp === "true");
   sound = new Audio("/sounds/level_up.mp3");
@@ -53,6 +53,9 @@ export default class extends Controller {
     if (this.levelUp) {
       setTimeout(() => {
         this.avatarTargets[0].classList.add("shakey");
+        this.pyroTargets[0].classList.add("pyro");
+        this.beforeTargets[0].classList.add("before");
+        this.afterTargets[0].classList.add("after");
         this.sound.load();
         this.sound.play();
         this.sound.currentTime = 0;
@@ -73,6 +76,9 @@ export default class extends Controller {
     setTimeout(() => {
       location.reload()
       this.avatarTargets[0].classList.remove("shakey");
-    }, 1000);
+      this.pyroTargets[0].classList.remove("pyro");
+      this.beforeTargets[0].classList.remove("before");
+      this.afterTargets[0].classList.remove("after");
+    }, 5000);
   }
 }
