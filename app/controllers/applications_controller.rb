@@ -21,7 +21,7 @@ class ApplicationsController < ApplicationController
     @application.user_id = @user.id
     @application.job_id = @job.id
     @application.employer_id = @job.employer.id
-    @user.xp += 25
+    @user.xp += 50
     if @application.save
       if @application.coverLetter.attached?
         @user.save

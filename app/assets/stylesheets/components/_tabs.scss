@@ -50,12 +50,12 @@ select:focus {
 .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
 .tabs [class*=" tab"] [type="radio"]:hover,
 .tabs [class*=" tab"] [type="radio"]:focus {
-  border-bottom: 1px solid #D217D9;
+  border-bottom: 1px solid #d217d9;
 }
 
 .tabs [class^="tab"] [type="radio"]:checked,
 .tabs [class*=" tab"] [type="radio"]:checked {
-  border-bottom: 2px solid #D217D9;
+  border-bottom: 2px solid #d217d9;
 }
 
 .tabs [class^="tab"] [type="radio"]:checked + div,

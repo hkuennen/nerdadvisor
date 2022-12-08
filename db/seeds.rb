@@ -47,7 +47,7 @@ hinnerk = User.create!({ email: "hinnerk@nerdadvisor.org", password: password, f
   Also, I consider myself a Python enthusiast keen to learn a new programming language in the Web Development world and shaping the digital future. In my leisure time, you'll find me at Lerchen&Eulen drinking margaritas.", role: "Job Seeker", level: 1, xp: 0 })
 hinnerk.image.attach(io: File.open("app/assets/images/users/hinnerk.jpg"), filename: "hinnerk.jpg", content_type: "image/jpg")
 
-aj = User.create!({ email: "aj@nerdadvisor.org", password: password, firstName: "Arjuna", lastName: "Sath", city: "Berlin", category: "Project Manager", skills: ["Web Development", "Programming", "Product Development", "Business Development", "Ruby on Rails", "Problem Solving", "Debugging"],
+aj = User.create!({ email: "aj@nerdadvisor.org", password: password, firstName: "Arjuna", lastName: "Sath", city: "Berlin", category: "Artist", skills: ["Sketch Art", "2D Art", "Graphic Design", "Photoshop", "AutoCAD"],
   linkedin: "www.linkedin.com/in/ajsath/", github: "https://github.com/ajsath", desc: "A marketing & business development veteran with 10+ years of service. Given my computer science background and continuation of full stack development, I strive to have a
   strong understanding of multiple departments (Product, Marketing, Sales, Coding, Design, Business Development, etc.) to better manage projects and understand through first-hand experience, the responsibilities/duties that my peers & colleagues carry.", role: "Job Seeker", level: 1, xp: 0 })
 aj.image.attach(io: File.open("app/assets/images/users/aj.jpg"), filename: "aj.jpg", content_type: "image/jpg")
