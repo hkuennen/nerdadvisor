@@ -8,8 +8,8 @@ class PagesController < ApplicationController
   end
 
   def index
-    @applications = Application.all
-    @jobs = Job.all
+    @applications = Application.where(user: @user)
+    @events = Attendee.where(user: @user).pluck(:event_id)
   end
 
   def levelup
