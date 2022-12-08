@@ -73,7 +73,6 @@ export default class extends Controller {
       },
       body: JSON.stringify({"levelup": "1"})
     })
-    // const log = "<h4 style=\"color:#10F6B7;\">Class: Rookie</h4><p style=\"color:#10F6B7;\">Unlocked New Feature!</p><p style=\"color:#10F6B7;\">+1 Visibility into # of Applicants</p>"
     setTimeout(() => {
       location.reload()
       this.avatarTargets[0].classList.remove("shakey");

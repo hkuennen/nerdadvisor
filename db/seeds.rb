@@ -48,20 +48,27 @@ puts "Creating users..."
 password = "123456"
 hinnerk = User.create!({ email: "hinnerk@nerdadvisor.org", password: password, firstName: "Hinnerk", lastName: "Künnen", city: "Berlin", category: "Engineer", skills: ["Machine Learning", "Workflow Development", "Web Development", "Technical Documentation", "JavaScript", "React", "SQL", "Problem Solving", "Debugging", "Troubleshooting"],
   linkedin: "www.linkedin.com/in/hinnerkkuennen/", github: "https://github.com/hkuennen", desc: "Graduated with an Economics degree, I am a former IT Consultant looking for a new job as a Backend / Full Stack Developer and changing career paths.
-  Also, I consider myself a Python enthusiast keen to learn a new programming language in the Web Development world and shaping the digital future. In my leisure time, you'll find me at Lerchen&Eulen drinking margaritas.", role: "Job Seeker", level: 1, xp: 0 })
+  Also, I consider myself a Python enthusiast keen to learn a new programming language in the Web Development world and shaping the digital future. In my leisure time, you'll find me at Lerchen&Eulen drinking margaritas.", role: "Job Seeker", level: 1, xp: 0, _class: "Newbie" })
+
 hinnerk.image.attach(io: File.open("app/assets/images/users/hinnerk.jpg"), filename: "hinnerk.jpg", content_type: "image/jpg")
+
 
 aj = User.create!({ email: "aj@nerdadvisor.org", password: password, firstName: "Arjuna", lastName: "Sath", city: "Berlin", category: "Artist", skills: ["Sketch Art", "2D Art", "Graphic Design", "Photoshop", "AutoCAD"],
   linkedin: "www.linkedin.com/in/ajsath/", github: "https://github.com/ajsath", desc: "A marketing & business development veteran with 10+ years of service. Given my computer science background and continuation of full stack development, I strive to have a
-  strong understanding of multiple departments (Product, Marketing, Sales, Coding, Design, Business Development, etc.) to better manage projects and understand through first-hand experience, the responsibilities/duties that my peers & colleagues carry.", role: "Job Seeker", level: 1, xp: 0 })
+  strong understanding of multiple departments (Product, Marketing, Sales, Coding, Design, Business Development, etc.) to better manage projects and understand through first-hand experience, the responsibilities/duties that my peers & colleagues carry.", role: "Job Seeker", level: 1, xp: 0, _class: "Newbie" })
+
 aj.image.attach(io: File.open("app/assets/images/users/aj.jpg"), filename: "aj.jpg", content_type: "image/jpg")
 
+
 adi = User.create!({ email: "adi@nerdadvisor.org", password: password, firstName: "Luthfi Aditya", lastName: "Pratomo", city: "Berlin", category: "Artist", skills: ["Web Development", "Front-end", "Product Design", "Graphic Design", "Product Marketing", "Problem Solving", "Debugging", "Prototyping"],
-  linkedin: "https://www.linkedin.com/in/luthfipratomo/", github: "https://github.com/Lapratomo24", desc: "I was a Marketing Manager until 30.09. I decided to resign to be able to join Le Wagon and learn how to code. I would like to switch my career and become a web developer.", role: "Job Seeker", level: 1, xp: 0 })
+  linkedin: "https://www.linkedin.com/in/luthfipratomo/", github: "https://github.com/Lapratomo24", desc: "I was a Marketing Manager until 30.09. I decided to resign to be able to join Le Wagon and learn how to code. I would like to switch my career and become a web developer.", role: "Job Seeker", level: 1, xp: 0, _class: "Newbie" })
+
 adi.image.attach(io: File.open("app/assets/images/users/adi.jpg"), filename: "adi.jpg", content_type: "image/jpg")
 
+
 juan = User.create!({ email: "juan@nerdadvisor.org", password: password, firstName: "Juan",lastName: "Hurtado", city: "Berlin", category: "Sound", skills: ["Web Development", "Singing", "Musician", "Voice Acting", "Theatre", "Writer", "Actor", "Problem Solving", "Debugging"], github: "https://github.com/SUMAJU",
-  desc: "My name is Juan, I'm 35 years old and I'm from Argentina. I am an actor, theatre director and writer. My wish is to be able to get a job with programming that allows me more independence.", role: "Job Seeker", level: 1, xp: 0 })
+  desc: "My name is Juan, I'm 35 years old and I'm from Argentina. I am an actor, theatre director and writer. My wish is to be able to get a job with programming that allows me more independence.", role: "Job Seeker", level: 1, xp: 0, _class: "Newbie" })
+
 juan.image.attach(io: File.open("app/assets/images/users/juan.jpg"), filename: "juan.jpg", content_type: "image/jpg")
 puts "Users created!"
 

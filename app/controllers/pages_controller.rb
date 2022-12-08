@@ -17,6 +17,7 @@ class PagesController < ApplicationController
       @user.xp = 0
       @user.level += 1
       @user.levelUp = false
+      @user._class = "Rookie"
       @user.save
     end
   end
