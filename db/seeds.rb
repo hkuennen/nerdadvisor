@@ -2,6 +2,10 @@ require 'faker'
 require 'date'
 
 puts "Clearing database..."
+Attendee.destroy_all
+
+Event.destroy_all
+
 Application.destroy_all
 
 Job.destroy_all
