@@ -63,12 +63,12 @@
               <% @applications.each do |application| %>
               <div class="box">
                 <span></span>
-                <div class="content d-flex flex-row" style="gap: 30px">
-                  <div class="mt-1">
-                    <%= cl_image_tag application.employer.image.key, width: "70%" %>
+                <div class="content d-flex">
+                  <div class="mt-1 col-4">
+                    <%= cl_image_tag application.employer.image.key, width: "50%" %>
                     <p class="mt-2"> Application #<%= application.id %></p>
                   </div>
-                  <div>
+                  <div class="col-8">
                     <h5> <%= application.job.title  %></h5>
                     <p> <%= application.job._type  %>: €<%=application.job.salary%>/year </p>
                     <p> You sent application on <%= application.created_at.strftime("%A, %d %b %Y at %l:%M %p GMT")  %></p>
