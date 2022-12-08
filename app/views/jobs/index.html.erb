@@ -23,11 +23,11 @@
                 <div class="form-group d-flex">
                   <p>
                     <label for="title" class="text-light form-input-label">Job Title</label>
-                    <input type="text" id="title" name="title" <%= "value=#{params[:title].capitalize}" if params[:title].present? %> placeholder="Search for title..." class="form-input bg-white justify-content-end">
+                    <input class="module-border-wrap text-placeholder" type="text" id="title" name="title" <%= "value=#{params[:title].capitalize}" if params[:title].present? %> placeholder="Search for title..." class="form-input bg-white justify-content-end">
                   </p>
                   <p>
                     <label for="location" class="text-light form-input-label">Location</label>
-                    <input type="text" id="location" name="city" <%= "value=#{params[:city].capitalize}" if params[:city].present? %> placeholder="Search for city..." class="form-input bg-white justify-content-end">
+                    <input class="module-border-wrap text-placeholder" type="text" id="location" name="city" <%= "value=#{params[:city].capitalize}" if params[:city].present? %> placeholder="Search for city..." class="form-input bg-white justify-content-end">
                   </p>
                 </div>
               </fieldset>
@@ -66,7 +66,7 @@
               <hr>
               <fieldset>
                 <legend class="play-font">Job Category</legend>
-                <div class="form-select" style="background:linear-gradient(to right, #f731db, #4600f1); border:#4600f1">
+                <div class="form-select module-border-wrap" style="background:linear-gradient(to right, #f731db, #4600f1); border:#4600f1">
                   <select id="skills" name="skills" class="form-control">
                     <option selected>Choose...</option>
                     <option>Sound</option>
