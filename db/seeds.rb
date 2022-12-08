@@ -117,7 +117,7 @@ puts "Creating employers..."
   f_name_10 = recruiters[10].split(" ").first
   l_name_10 = recruiters[10].split(" ").last
   squareEnix = Employer.create!({ companyName: companies[10][:name], city: companies[10][:city], street: companies[10][:street], postcode: companies[10][:postcode], market: "Videogames", recruiterFirstName: f_name_10, recruiterLastName: l_name_10, recruiterEmail: "#{f_name_10.downcase}.#{l_name_10.downcase}@#{companies[10][:domain]}" })
-  squareEnix.image.attach(io: File.open("app/assets/images/employers/squareEnix.jpg"), filename: "squareEnix.jpg", content_type: "image/jpg")
+  squareEnix.image.attach(io: File.open("app/assets/images/employers/squareEnix.png"), filename: "squareEnix.png", content_type: "image/jpg")
 
   f_name_11 = recruiters[11].split(" ").first
   l_name_11 = recruiters[11].split(" ").last
