@@ -77,7 +77,7 @@ puts "Creating employers..."
   f_name_2 = recruiters[2].split(" ").first
   l_name_2 = recruiters[2].split(" ").last
   nintendo = Employer.create!({ companyName: companies[2][:name], city: companies[2][:city], street: companies[2][:street], postcode: companies[2][:postcode], market: "Videogames", recruiterFirstName: f_name_2, recruiterLastName: l_name_2, recruiterEmail: "#{f_name_2.downcase}.#{l_name_2.downcase}@#{companies[2][:domain]}" })
-  nintendo.image.attach(io: File.open("app/assets/images/employers/nintendo.jpg"), filename: "nintendo.jpg", content_type: "image/jpg")
+  nintendo.image.attach(io: File.open("app/assets/images/employers/nintendo.png"), filename: "nintendo.png", content_type: "image/jpg")
 
   f_name_3 = recruiters[3].split(" ").first
   l_name_3 = recruiters[3].split(" ").last
