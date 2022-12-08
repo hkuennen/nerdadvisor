@@ -21,13 +21,17 @@
             </div>
             <br>
             <div class="d-flex justify-content-between">
-              <div style="font-weight: bold;">
+              <div class="col-8" style="font-weight: bold; font-size: 14px;">
                 <%= event.venue  %> - <%=event.address%>
                 <br>
                 <%= event.date.strftime("%A, %d %b %Y at %l:%M %p GMT")  %>
               </div>
-              <%= link_to "RSVP", event_attendees_path(event), data: { turbo_method: :post }, remote: true, style:"text-decoration:none; color:#f9fafc; font-weight:bold", class:"btn col-3 btn-secondary1" %>
-                       <%=event.attendees.count  %>
+              <div>
+                <div>
+                  <%= link_to "RSVP", event_attendees_path(event), data: { turbo_method: :post }, remote: true, style:"text-decoration:none; color:#f9fafc; font-weight:bold; width: 100%;", class:"btn btn-secondary1" %>
+                </div>
+                <p class="pt-2"><%=event.attendees.count %> attendees</p>
+              </div>
 
             </div>
           </div>
