@@ -1,5 +1,6 @@
 <%= render "shared/navbar" %>
 
+<%# Search Filter Form %>
 <div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px; min-height: 250vh;">
   <div class="container">
   <h1 class="text-center mb-4">Available Jobs</h1>
@@ -156,6 +157,7 @@
         </div>
       </div>
 
+      <%# Display Job Cards %>
 
       <div class="col-8">
       <% @jobs.each do |job| %>
@@ -184,7 +186,9 @@
           </div>
         </div>
         <% end %>
+        <%# <%= paginate @jobs %>
       </div>
     </div>
+
   </div>
 </div>

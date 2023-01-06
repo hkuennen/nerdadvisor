@@ -2,7 +2,6 @@ class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    # @jobs = Job.page(params[:page]).per(7)
     @jobs = Job.all
 
     @jobs = @jobs.where("title ILIKE :title", title: "%#{params[:title]}%") if params[:title].present?
@@ -16,7 +15,7 @@ class JobsController < ApplicationController
       @filtered_jobs_type << @jobs.where(_type: params[:is]) if params[:is]
       @filtered_jobs_type << @jobs.where(_type: params[:ws]) if params[:ws]
       arr = @filtered_jobs_type.flatten
-      @jobs = Job.where(id: arr.map(&:id)) 
+      @jobs = Job.where(id: arr.map(&:id))
     end
 
     if params[:skills].present? && params[:skills] != "Choose..."
@@ -43,6 +42,7 @@ class JobsController < ApplicationController
       arr = @filtered_jobs_on_site.flatten
       @jobs = Job.where(id: arr.map(&:id))
     end
+    # @jobs = Job.page(params[:page]).per(10)
 
   end
 
