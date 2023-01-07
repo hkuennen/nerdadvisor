@@ -1,38 +1,33 @@
+/* Buttons */
 .btn-style {
   text-align: center;
 }
-.btn-secondary1:hover {
-  background-color: #e6b222;
-  border-color: transparent;
-  transition: 0.5s;
-}
+
 .btn-secondary1 {
-  background-color: #e67e22;
+  background-color: $orange;
   border-color: transparent;
 }
-.btn-secondary2:hover {
-  background-color: #df39e5;
+
+.btn-secondary1:hover {
+  background-color: $yellow;
   border-color: transparent;
   transition: 0.5s;
 }
+
 .btn-secondary2 {
-  background-color: #d217d9;
+  background-color: $pink;
   border-color: transparent;
 }
-// .btn-secondary3:hover {
-//   background-color: #d217d9;
-//   border-color: #e67e22;
-// }
-// .btn-secondary3 {
-//   background-color: transparent;
-//   border-color: #e67e22;
-// }
-.btn-secondary4:hover {
-  background-color: #e6b222;
+
+.btn-secondary2:hover {
+  background-color: $purple;
   border-color: transparent;
   transition: 0.5s;
 }
-.btn-secondary4 {
-  background-color: #e67e22;
-  border-color: transparent;
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }

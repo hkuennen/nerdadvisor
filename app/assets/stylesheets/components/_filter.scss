@@ -1,0 +1,29 @@
+/* Filter section on job page */
+.category-border {
+  background: linear-gradient(to right, #f731db, #4600f1);
+  border: #4600f1;
+}
+
+.module-border-wrap {
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, #f731db, #4600f1);
+  padding: 3px;
+}
+
+#search-text {
+  color: #f731db;
+}
+
+.play-font {
+  font-family: $headers-font;
+  font-size: medium;
+}
+
+.box-bg {
+  background-color: #10F6B7;
+}
+
+.text-placeholder::placeholder {
+  color: #f9fafc;
+}

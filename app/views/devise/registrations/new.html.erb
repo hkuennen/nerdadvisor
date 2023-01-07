@@ -1,10 +1,10 @@
 <%= render "shared/navbar" %>
 
-<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px; min-height: 100vh;">
+<div class="bg-main main-padding min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg);">
 
-  <div class="container" style="width:50%;">
+  <div class="container w-50">
 
-    <h2 style="color:#10F6B7;">Sign up</h2>
+    <h2 style="color:$green;">Sign up</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
       <%= f.error_notification %>

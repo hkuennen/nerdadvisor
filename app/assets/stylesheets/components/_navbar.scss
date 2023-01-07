@@ -1,26 +1,4 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100vw;
-  font-family: 'Press Start 2P', cursive;
-  background-image: url(https://wallpapercave.com/wp/wp1978951.jpg);
-  background-size: cover;
-  background-position: 50% 46%;
-}
-
-.navbar-lewagon .navbar-collapse,
-.main-navbar .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img,
-.main-navbar .navbar-brand img {
-  width: 30%;
-}
-
+/* Homepage navbar */
 .main-navbar {
   justify-content: space-between;
   position: fixed;
@@ -28,23 +6,48 @@
   left: 0;
   z-index: 10;
   width: 100vw;
-  font-family: 'Press Start 2P', cursive;
+  font-family: $headers-font;
+}
+
+/* Pages navbar */
+.navbar-lewagon {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  font-family: $headers-font;
+  background-image: url(https://wallpapercave.com/wp/wp1978951.jpg);
+  background-size: cover;
+  background-position: 50% 46%;
+}
+
+/* Navbar general styling */
+.navbar-lewagon .navbar-brand img,
+.main-navbar .navbar-brand img {
+  width: 30%;
+}
+
+.navbar-lewagon .navbar-collapse,
+.main-navbar .navbar-collapse {
+  flex-grow: 0;
 }
 
 #nav-homepage {
   margin: 10px 50px;
 }
 
+.navbar-dark {
+  border: 1px solid #f9fafc;
+}
+
 a.nav-link {
   color: $green;
-}
 
-a.nav-link:hover {
-  color: #f9fafc;
-}
-
-.navbar-dark {
-  border: 1px solid f9fafc;
+  &:hover {
+    color: #f9fafc;
+  }
 }
 
 .nav-item {
@@ -52,16 +55,25 @@ a.nav-link:hover {
   font-size: 12px;
 }
 
-.btn-link {
-  text-decoration: none;
-  background-color: $green;
-  text-shadow: 1px 1px #D217D9;
+.nav-margin {
+  margin-top: 20vh;
 }
 
 #login a:hover {
   color: #f9fafc;
 }
 
-.nav-margin {
-  margin-top: 20vh;
+#login {
+  border: 1px solid #10F6B7;
 }
+
+#login:hover {
+  border: 1px solid #f9fafc;
+}
+
+/*.btn-link {
+  text-decoration: none;
+  background-color: $green;
+  text-shadow: 1px 1px #D217D9;
+}*/
+
