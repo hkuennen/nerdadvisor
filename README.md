@@ -1,1 +1,1 @@
-https://nerdadvisor.herokuapp.com
+http://www.nerdadvisor.org
