@@ -1,77 +1,4 @@
-// Specific CSS for your home-page
-body {
-  background-color: black;
-}
-
-.extra-padding1 {
-  padding-top: 100px;
-}
-
-.extra-padding2 {
-  padding-bottom: 100px;
-}
-
-h1 {
-  color: $green;
-  font-size: 20px;
-}
-.fronttext {
-  color: $green;
-  font-size: 40px;
-}
-.form-shape {
-  width: 70%;
-  margin: 0 auto;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
-h4 {
-  font-size: 15px;
-}
-
-h5 {
-  font-size: 15px;
-}
-
-#login {
-  border: 1px solid #10F6B7;
-}
-
-#login:hover {
-  border: 1px solid #f9fafc;
-}
-
-.mapboxgl-popup {
-  max-width: 200px;
-}
-
-.mapboxgl-popup-content {
-  text-align: center;
-  width: 80%;
-  padding: 0;
-  color: $pink;
-  border: 1px solid #10F6B7;
-}
-
-#create-event {
-  margin-bottom: 50px;
-}
-
-#create-event a {
-  color: #f9fafc;
-}
-
-.better-margin {
-  margin-top: 100px;
-}
-// XP status bar
+/* XP status bar */
 .exp {
   position: relative;
   width: 300px;
@@ -103,8 +30,7 @@ h5 {
     }
 }
 
-// scrolling
-
+/* Scrolling */
 @property --num {
   syntax: "<integer>";
   initial-value: 0;
@@ -130,8 +56,7 @@ h5 {
   }
 }
 
-//shake shake shake shake shaaaaake
-
+/* Shake */
 .shakey {
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
@@ -156,12 +81,12 @@ h5 {
   }
 }
 
-//FIREWORKSSSSSS YAY
+/* Fireworks */
 $particles: 50;
 $width: 500;
 $height: 500;
 
-// Create the explosion...
+/* Explosion effect */
 $box-shadow: ();
 $box-shadow2: ();
 @for $i from 0 through $particles {

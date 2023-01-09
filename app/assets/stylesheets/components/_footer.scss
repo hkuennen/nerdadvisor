@@ -1,3 +1,4 @@
+/* Footer */
 .footer {
   width: 100%;
   height: 200px;
@@ -10,21 +11,23 @@
   color: $green;
   text-align: center;
 }
+
+
+/* Footer icons */
 .footer-links {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.footer-links a {
-  color: $green;
-  opacity: 1;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 0.7;
-}
-.footer .fa-heart {
-  color: $green;
+
+  a {
+    color: $green;
+    opacity: 1;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0px 10px;
+  }
+
+  a:hover {
+    opacity: 0.7;
+  }
 }

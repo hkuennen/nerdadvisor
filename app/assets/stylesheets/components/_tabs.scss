@@ -1,12 +1,6 @@
+/* Profile tabs on dashboard */
 .tab-text {
-  color: #f9fafc;
-}
-
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
+  color: $light-gray;
 }
 
 .tabs {
