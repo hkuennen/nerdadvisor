@@ -1,5 +1,8 @@
 class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
+  before_action :set_user
+  before_action :set_event, only: [:destroy]
+
 
   def index
     # @jobs = Job.page(params[:page]).per(7)
@@ -16,7 +19,7 @@ class JobsController < ApplicationController
       @filtered_jobs_type << @jobs.where(_type: params[:is]) if params[:is]
       @filtered_jobs_type << @jobs.where(_type: params[:ws]) if params[:ws]
       arr = @filtered_jobs_type.flatten
-      @jobs = Job.where(id: arr.map(&:id)) 
+      @jobs = Job.where(id: arr.map(&:id))
     end
 
     if params[:skills].present? && params[:skills] != "Choose..."
@@ -51,14 +54,38 @@ class JobsController < ApplicationController
   end
 
   def new
+    @job = Job.new
   end
 
   def create
+    @job = Job.new(job_params)
+    @job.user_id = @job.id
+    if @job.save
+      redirect_to job_path(@job)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
   end
 
   def destroy
+    @job.destroy
+    redirect_to events_path, status: :see_other
   end
+
+  def job_params
+    params.require(:job).permit(:title, :_type)
+  end
+
+  def set_user
+    @user = current_user
+  end
+
+  def set_job
+    @job = Job.find(params[:job_id])
+  end
+
+
 end
