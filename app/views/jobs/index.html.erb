@@ -1,21 +1,21 @@
 <%= render "shared/navbar" %>
 
-<div class="bg-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); padding-top:150px; min-height: 250vh;">
+<div class="bg-main main-padding" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t4.ftcdn.net/jpg/04/09/70/87/360_F_409708782_HxuxOH8f7xSmj5p4ygbAbuJE74vGGj2N.jpg); min-height: 250vh;">
   <div class="container">
   <h1 class="text-center mb-4">Available Jobs</h1>
     <div id="create-job" class="text-center">
     <%= link_to "Create a New Job", new_job_path, class: "btn btn-secondary2" %>
   </div>
     <div class="row">
-      <div class="card-product col-4 text-light d-grid" >
+      <div class="card-product col-4 text-light d-grid">
         <div>
-          <img style="width: 100%" src="https://thumbs.gfycat.com/DopeyLegitimateGaur-max-1mb.gif" />
+          <img class="w-100" src="https://thumbs.gfycat.com/DopeyLegitimateGaur-max-1mb.gif" />
         </div>
         <div class="module-border-wrap">
-          <div class="col card-product-infos" id="search-text" style="padding: 10px">
+          <div class="col card-product-infos p-2" id="search-text">
             <form action="<%= jobs_path %>" method="GET">
               <fieldset>
-              <legend class="play-font" style="font-size: larger;">Results</legend>
+              <legend class="play-font fs-4">Results</legend>
                 <p class="text-light py-2">Found <strong><%= pluralize(@jobs.size, "job") %>
                 </strong></p>
               </fieldset>
@@ -24,12 +24,12 @@
               <legend class="play-font">Search</legend>
                 <div class="form-group d-flex">
                   <p>
-                    <label for="title" class="text-light form-input-label">Job Title</label>
-                    <input class="module-border-wrap text-placeholder" type="text" id="title" name="title" <%= "value=#{params[:title].capitalize}" if params[:title].present? %> placeholder="Search for title..." class="form-input bg-white justify-content-end">
+                    <label for="title" class="text-light form-input-label form-input justify-content-end">Job Title</label>
+                    <input class="module-border-wrap text-placeholder" type="text" id="title" name="title" <%= "value=#{params[:title].capitalize}" if params[:title].present? %> placeholder="Search for title...">
                   </p>
                   <p>
                     <label for="location" class="text-light form-input-label">Location</label>
-                    <input class="module-border-wrap text-placeholder" type="text" id="location" name="city" <%= "value=#{params[:city].capitalize}" if params[:city].present? %> placeholder="Search for city..." class="form-input bg-white justify-content-end">
+                    <input class="module-border-wrap text-placeholder form-input bg-white justify-content-end" type="text" id="location" name="city" <%= "value=#{params[:city].capitalize}" if params[:city].present? %> placeholder="Search for city...">
                   </p>
                 </div>
               </fieldset>
@@ -68,7 +68,7 @@
               <hr>
               <fieldset>
                 <legend class="play-font">Job Category</legend>
-                <div class="form-select module-border-wrap" style="background:linear-gradient(to right, #f731db, #4600f1); border:#4600f1">
+                <div class="form-select module-border-wrap category-border">
                   <select id="skills" name="skills" class="form-control">
                     <option selected>Choose...</option>
                     <option>Sound</option>
@@ -151,7 +151,7 @@
               <hr>
               <fieldset>
                 <div class="d-flex justify-content-center">
-                  <button type="Submit" class="btn btn-secondary4 px-5 text-light">Filter</button>
+                  <button type="Submit" class="btn btn-secondary1 px-5 text-light">Filter</button>
                 </div>
               </fieldset>
             </form>
@@ -175,14 +175,14 @@
             </div>
             <br>
             <div class="d-flex justify-content-between">
-              <div style="font-weight: bold;">
+              <div class="fw-bold">
                 <%= job._type  %>: €<%=job.salary%>/year
                 <img src="https://mario.wiki.gallery/images/9/91/PN_Spinning_Coin.gif" width="20px" />
                 <br>
                 <%= job.city  %> - Start Date: <%=job.startDate.strftime("%m/%Y")%>
               </div>
               </p>
-              <%= link_to "I'm interested", job_path(job), style:"text-decoration:none; color:#f9fafc; font-weight:bold; margin-top:4px", class:"btn col-3 btn-secondary4" %>
+              <%= link_to "I'm interested", job_path(job), class:"btn col-3 btn-secondary1 fw-bold text-light p-2" %>
             </div>
           </div>
         </div>

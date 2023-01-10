@@ -1,24 +1,10 @@
+/* Avatar on navbar */
 .avatar {
   width: 40px;
   border-radius: 50%;
 }
-.avatar-large {
-  width: 56px;
-  border-radius: 50%;
-}
-.avatar-bordered {
-  width: 40px;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
-}
-.avatar-square {
-  width: 40px;
-  border-radius: 0px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
-}
 
+/* Avatar on dashboard */
 .avatar-dash {
   height: 320px;
   position: relative;
@@ -33,6 +19,7 @@
   z-index: 2;
 }
 
+/* Avatar on dashboard effects */
 @keyframes cycle-colors {
   0% { border-color: #10F6B7; }
   25% { border-color: #D217D9; }
@@ -73,7 +60,6 @@
 .avatar-dash::after {
   animation-delay: 1s;
 }
-
 
 .avatar-dash:hover::before,
 .avatar-dash:hover::after {
