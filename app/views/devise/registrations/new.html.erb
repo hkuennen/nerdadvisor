@@ -10,6 +10,18 @@
       <%= f.error_notification %>
 
       <div class="form-inputs text-light">
+        <div class="input-group justify-content-between">
+          <%= f.input :firstName, 
+                      required: true,
+                      autofocus: true,
+                      class: "form-control",
+                      input_html: { autocomplete: "firstName" }%>
+          <%= f.input :lastName, 
+                      required: true,
+                      autofocus: true,
+                      class: "form-control",
+                      input_html: { autocomplete: "lastName" }%>
+        </div>
         <%= f.input :email,
                     required: true,
                     autofocus: true,
@@ -21,6 +33,9 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
+        <%= f.input :role, as: :select, collection: ["Job Seeker", "Employer"],
+                    required: true,
+                    input_html: { autocomplete: "role" } %>
         <%= f.input :image,
                     as: :file,
                     required: true,

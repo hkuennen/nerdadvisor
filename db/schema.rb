@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_08_223213) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_12_145349) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -122,8 +122,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_08_223213) do
     t.string "category"
     t.text "skills", default: [], array: true
     t.string "role"
-    t.integer "xp"
-    t.integer "level"
+    t.integer "xp", default: 0
+    t.integer "level", default: 1
     t.boolean "levelUp", default: false
     t.string "linkedin"
     t.string "github"
